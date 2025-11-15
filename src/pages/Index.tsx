@@ -382,8 +382,28 @@ const Index = () => {
                   <Icon name="MapPin" size={24} className="text-primary" />
                 </div>
                 <h3 className="font-bold mb-2">Адрес</h3>
-                <p className="text-muted-foreground">г. Благовещенск</p>
+                <p className="text-muted-foreground">г. Благовещенск, ул. Забурхановская 98</p>
               </div>
+            </div>
+            <div className="flex justify-center gap-6 mt-12">
+              <a 
+                href="https://2gis.ru/blagoveshchensk/firm/70000001018537192" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-white rounded-lg hover:shadow-lg transition-shadow"
+              >
+                <Icon name="MapPin" size={20} className="text-primary" />
+                <span className="font-medium">Отзывы на 2ГИС</span>
+              </a>
+              <a 
+                href="https://yandex.ru/maps/org/grafika/1264341606/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-white rounded-lg hover:shadow-lg transition-shadow"
+              >
+                <Icon name="Star" size={20} className="text-primary" />
+                <span className="font-medium">Отзывы на Яндекс</span>
+              </a>
             </div>
           </div>
         </div>
