@@ -270,7 +270,7 @@ const BannerCalculator = () => {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="Arial">Arial</SelectItem>
-                          <SelectItem value="Times New Roman">Times New Roman</SelectItem>
+                          <SelectItem value="Montserrat">Montserrat</SelectItem>
                           <SelectItem value="Courier New">Courier New</SelectItem>
                           <SelectItem value="Georgia">Georgia</SelectItem>
                           <SelectItem value="Verdana">Verdana</SelectItem>
