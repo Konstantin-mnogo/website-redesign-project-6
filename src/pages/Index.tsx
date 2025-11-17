@@ -25,6 +25,7 @@ const Index = () => {
             <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
             <a href="#portfolio" className="text-sm font-medium hover:text-primary transition-colors">Портфолио</a>
             <a href="#advantages" className="text-sm font-medium hover:text-primary transition-colors">Преимущества</a>
+            <a href="#calculator" className="text-sm font-medium hover:text-primary transition-colors">Калькуляторы</a>
             <a href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors">Отзывы</a>
             <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
           </nav>
@@ -61,6 +62,13 @@ const Index = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Преимущества
+                  </a>
+                  <a 
+                    href="#calculator" 
+                    className="text-lg font-medium hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Калькуляторы
                   </a>
                   <a 
                     href="#testimonials" 

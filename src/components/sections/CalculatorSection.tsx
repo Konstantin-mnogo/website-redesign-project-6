@@ -5,8 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import BannerCalculator from "@/components/BannerCalculator";
+import Icon from "@/components/ui/icon";
 
 const CalculatorSection = () => {
+  const [selectedCalculator, setSelectedCalculator] = useState<string>("banner");
+
   const [standWidth, setStandWidth] = useState<string>("");
   const [standHeight, setStandHeight] = useState<string>("");
   const [standThickness, setStandThickness] = useState<string>("3");
@@ -83,17 +86,50 @@ const CalculatorSection = () => {
 
   return (
     <>
-      <section className="py-20 bg-muted/30">
+      <section id="calculator" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Калькулятор информационных стендов</h2>
-              <p className="text-lg text-muted-foreground">
-                Рассчитайте стоимость стенда из ПВХ
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Калькуляторы</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Выберите тип калькулятора для расчёта стоимости
               </p>
+              
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <Button 
+                  size="lg"
+                  variant={selectedCalculator === "banner" ? "default" : "outline"}
+                  onClick={() => setSelectedCalculator("banner")}
+                  className="min-w-[200px]"
+                >
+                  <Icon name="Image" size={20} className="mr-2" />
+                  Баннеры
+                </Button>
+                <Button 
+                  size="lg"
+                  variant={selectedCalculator === "stand" ? "default" : "outline"}
+                  onClick={() => setSelectedCalculator("stand")}
+                  className="min-w-[200px]"
+                >
+                  <Icon name="PanelTop" size={20} className="mr-2" />
+                  Инфостенды
+                </Button>
+                <Button 
+                  size="lg"
+                  variant={selectedCalculator === "signage" ? "default" : "outline"}
+                  onClick={() => setSelectedCalculator("signage")}
+                  className="min-w-[200px]"
+                >
+                  <Icon name="Lightbulb" size={20} className="mr-2" />
+                  Вывески
+                </Button>
+              </div>
             </div>
+            
+            {selectedCalculator === "stand" && (
             <Card className="shadow-xl">
               <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6">Информационные стенды</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-6">
                     <div>
@@ -209,21 +245,12 @@ const CalculatorSection = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Калькулятор стоимости вывески</h2>
-              <p className="text-lg text-muted-foreground">
-                Рассчитайте примерную стоимость вашей вывески онлайн
-              </p>
-            </div>
+            )}
+            
+            {selectedCalculator === "signage" && (
             <Card className="shadow-xl">
               <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6">Наружные вывески</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-6">
                     <div>
@@ -351,11 +378,12 @@ const CalculatorSection = () => {
                 </div>
               </CardContent>
             </Card>
+            )}
           </div>
         </div>
       </section>
 
-      <BannerCalculator />
+      {selectedCalculator === "banner" && <BannerCalculator />}
     </>
   );
 };
