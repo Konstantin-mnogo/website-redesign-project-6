@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import BannerCalculator from "@/components/BannerCalculator";
 
 const CalculatorSection = () => {
   const [standWidth, setStandWidth] = useState<string>("");
@@ -353,6 +354,8 @@ const CalculatorSection = () => {
           </div>
         </div>
       </section>
+
+      <BannerCalculator />
     </>
   );
 };
