@@ -84,6 +84,48 @@ const BannerCalculator = () => {
 
     ctx.fillText(text, textX, textY);
 
+    if (withGrommets) {
+      const margin = 20 * scale;
+      const grommetsSpacing = 300;
+      const grommetsRadius = 5 * scale;
+      
+      ctx.fillStyle = '#666';
+      ctx.strokeStyle = '#999';
+      ctx.lineWidth = 2 * scale;
+      
+      const topBottomCount = Math.ceil(canvas.width / grommetsSpacing);
+      for (let i = 0; i < topBottomCount; i++) {
+        const x = margin + (i * grommetsSpacing);
+        if (x <= canvas.width - margin) {
+          ctx.beginPath();
+          ctx.arc(x, margin, grommetsRadius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+          
+          ctx.beginPath();
+          ctx.arc(x, canvas.height - margin, grommetsRadius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+        }
+      }
+      
+      const leftRightCount = Math.ceil(canvas.height / grommetsSpacing);
+      for (let i = 1; i < leftRightCount - 1; i++) {
+        const y = margin + (i * grommetsSpacing);
+        if (y <= canvas.height - margin) {
+          ctx.beginPath();
+          ctx.arc(margin, y, grommetsRadius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+          
+          ctx.beginPath();
+          ctx.arc(canvas.width - margin, y, grommetsRadius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+        }
+      }
+    }
+
     canvas.toBlob((blob) => {
       if (!blob) return;
       const url = URL.createObjectURL(blob);
@@ -166,11 +208,9 @@ const BannerCalculator = () => {
                       <span className="text-muted-foreground">Площадь:</span>
                       <span className="font-bold">{calculateArea().toFixed(2)} м²</span>
                     </div>
-                    {calculateArea() < 2 && calculateArea() > 0 && (
-                      <p className="text-sm text-amber-600">
-                        * Минимальный размер к печати принимается от 2 м²
-                      </p>
-                    )}
+                    <p className="text-sm text-muted-foreground border-t pt-3">
+                      * Минимальный размер к печати принимается от 2 м²
+                    </p>
                   </div>
 
                   <Button 
@@ -344,7 +384,7 @@ const BannerCalculator = () => {
                     <label className="block text-sm font-medium mb-4">Предпросмотр макета</label>
                     <div 
                       ref={canvasRef}
-                      className="border-2 border-gray-300 rounded-lg overflow-hidden"
+                      className="border-2 border-gray-300 rounded-lg overflow-hidden relative"
                       style={{
                         backgroundColor: bgColor,
                         aspectRatio: width && height ? `${width} / ${height}` : '16 / 9',
@@ -353,6 +393,32 @@ const BannerCalculator = () => {
                         ...getAlignStyle()
                       }}
                     >
+                      {withGrommets && (
+                        <svg 
+                          className="absolute inset-0 w-full h-full pointer-events-none"
+                          style={{ padding: '20px' }}
+                        >
+                          {(() => {
+                            const svgWidth = canvasRef.current?.clientWidth || 800;
+                            const svgHeight = canvasRef.current?.clientHeight || 600;
+                            const margin = 20;
+                            const spacing = 100;
+                            const grommets = [];
+                            
+                            for (let x = margin; x <= svgWidth - margin - 40; x += spacing) {
+                              grommets.push(<circle key={`top-${x}`} cx={x} cy={margin} r="5" fill="#666" stroke="#999" strokeWidth="2" />);
+                              grommets.push(<circle key={`bottom-${x}`} cx={x} cy={svgHeight - margin - 40} r="5" fill="#666" stroke="#999" strokeWidth="2" />);
+                            }
+                            
+                            for (let y = margin + spacing; y <= svgHeight - margin - spacing - 40; y += spacing) {
+                              grommets.push(<circle key={`left-${y}`} cx={margin} cy={y} r="5" fill="#666" stroke="#999" strokeWidth="2" />);
+                              grommets.push(<circle key={`right-${y}`} cx={svgWidth - margin - 40} cy={y} r="5" fill="#666" stroke="#999" strokeWidth="2" />);
+                            }
+                            
+                            return grommets;
+                          })()}
+                        </svg>
+                      )}
                       <p 
                         style={{
                           color: textColor,
@@ -361,7 +427,9 @@ const BannerCalculator = () => {
                           textAlign: textAlign as any,
                           margin: 0,
                           width: textAlign === 'justify' ? '100%' : 'auto',
-                          lineHeight: 1.4
+                          lineHeight: 1.4,
+                          position: 'relative',
+                          zIndex: 1
                         }}
                       >
                         {text}
