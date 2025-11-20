@@ -19,7 +19,9 @@ const ContactSection = () => {
                 <CardContent className="p-6 text-center">
                   <Icon name="Phone" size={32} className="mx-auto mb-4 text-primary" />
                   <h3 className="font-bold mb-2 text-white">Телефон</h3>
-                  <p className="text-white">+7 (XXX) XXX-XX-XX</p>
+                  <a href="tel:+74162227678" className="text-white hover:text-primary transition-colors">
+                    +7 (4162) 22-76-78
+                  </a>
                 </CardContent>
               </Card>
               <Card className="bg-white/10 border-white/20">
