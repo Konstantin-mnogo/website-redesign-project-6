@@ -13,7 +13,7 @@ const HeroSection = () => {
             Изготовление и монтаж наружной и интерьерной рекламы в Благовещенске и Амурской области
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-secondary hover:bg-white/90 text-lg px-8 py-6" asChild>
+            <Button size="lg" className="bg-white text-secondary hover:bg-primary hover:text-white transition-colors text-lg px-8 py-6" asChild>
               <a href="/calculator">
                 Рассчитать стоимость
               </a>

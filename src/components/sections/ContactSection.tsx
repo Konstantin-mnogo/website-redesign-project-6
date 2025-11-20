@@ -47,7 +47,7 @@ const ContactSection = () => {
 
   return (
     <>
-      <section id="contact" className="py-20 bg-secondary text-white">
+      <section id="contacts" className="py-20 bg-secondary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Готовы начать?</h2>
@@ -83,7 +83,7 @@ const ContactSection = () => {
                     <Icon name="MapPin" size={32} className="text-primary" />
                   </div>
                   <h3 className="font-bold mb-2 text-white">Адрес</h3>
-                  <p className="text-white">г. Благовещенск</p>
+                  <p className="text-white text-sm leading-relaxed">г. Благовещенск,<br/>ул. Забурхановская, 98,<br/>офис 4</p>
                 </CardContent>
               </Card>
             </div>
@@ -185,7 +185,7 @@ const ContactSection = () => {
                 </a>
                 <div className="flex items-start gap-2">
                   <Icon name="MapPin" size={16} className="mt-0.5 flex-shrink-0" />
-                  <span>675000, Россия, Амурская область, г. Благовещенск, ул. Забурхановская, 98, оф. 4</span>
+                  <span>675000, Россия, Амурская область,<br/>г. Благовещенск,<br/>ул. Забурхановская, 98, оф. 4</span>
                 </div>
               </div>
             </div>
