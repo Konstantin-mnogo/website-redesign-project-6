@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import BannerCalculator from "@/components/BannerCalculator";
+import StandCalculator from "@/components/calculators/StandCalculator";
+import SignageCalculator from "@/components/calculators/SignageCalculator";
+import StandPreview from "@/components/calculators/StandPreview";
 import Icon from "@/components/ui/icon";
 
 const CalculatorSection = () => {
@@ -103,127 +101,6 @@ const CalculatorSection = () => {
     return Math.round(price);
   };
 
-  const renderStandPreview = () => {
-    const width = parseFloat(standWidth) || 100;
-    const height = parseFloat(standHeight) || 100;
-    
-    const maxDisplayWidth = 400;
-    const maxDisplayHeight = 500;
-    
-    const scale = Math.min(
-      maxDisplayWidth / width,
-      maxDisplayHeight / height,
-      4
-    );
-    
-    const displayWidth = width * scale;
-    const displayHeight = height * scale;
-    
-    const headerHeight = Math.max(displayHeight * 0.15, 30);
-    const fontSize = Math.max(headerHeight * 0.5, 14);
-    
-    const bgColors: Record<string, string> = {
-      "white": "linear-gradient(to right bottom, #ffffff, #f3f4f6)",
-      "blue": "linear-gradient(to right bottom, #dbeafe, #bfdbfe)",
-      "gray": "linear-gradient(to right bottom, #f3f4f6, #e5e7eb)",
-      "beige": "linear-gradient(to right bottom, #fef3c7, #fde68a)"
-    };
-    
-    const fontFamilies: Record<string, string> = {
-      "sans-serif": "Arial, sans-serif",
-      "serif": "Georgia, serif",
-      "monospace": "Courier New, monospace"
-    };
-    
-    const pocketSizes: Record<string, { widthMm: number; heightMm: number }> = {
-      "A5": { widthMm: 148 + 16, heightMm: 210 + 8 },
-      "A4": { widthMm: 210 + 16, heightMm: 297 + 8 },
-      "A3": { widthMm: 297 + 16, heightMm: 420 + 8 },
-      "A2": { widthMm: 420 + 16, heightMm: 594 + 8 }
-    };
-    
-    const pockets = [];
-    
-    for (let i = 0; i < parseInt(pocketsA5); i++) {
-      const pocket = pocketSizes["A5"];
-      pockets.push({ 
-        format: "A5", 
-        width: (pocket.widthMm / 10) * scale,
-        height: (pocket.heightMm / 10) * scale
-      });
-    }
-    for (let i = 0; i < parseInt(pocketsA4); i++) {
-      const pocket = pocketSizes["A4"];
-      pockets.push({ 
-        format: "A4", 
-        width: (pocket.widthMm / 10) * scale,
-        height: (pocket.heightMm / 10) * scale
-      });
-    }
-    for (let i = 0; i < parseInt(pocketsA3); i++) {
-      const pocket = pocketSizes["A3"];
-      pockets.push({ 
-        format: "A3", 
-        width: (pocket.widthMm / 10) * scale,
-        height: (pocket.heightMm / 10) * scale
-      });
-    }
-    for (let i = 0; i < parseInt(pocketsA2); i++) {
-      const pocket = pocketSizes["A2"];
-      pockets.push({ 
-        format: "A2", 
-        width: (pocket.widthMm / 10) * scale,
-        height: (pocket.heightMm / 10) * scale
-      });
-    }
-    
-    return (
-      <div 
-        className="border-4 border-primary/20 shadow-lg relative overflow-hidden"
-        style={{
-          width: `${displayWidth}px`,
-          height: `${displayHeight}px`,
-          margin: "0 auto",
-          background: bgColors[standBgColor]
-        }}
-      >
-        <div 
-          className="absolute top-0 left-0 right-0 flex items-center justify-center text-secondary font-bold px-4"
-          style={{ 
-            height: `${headerHeight}px`
-          }}
-        >
-          <div style={{
-            fontSize: `${fontSize}px`,
-            fontFamily: fontFamilies[standFontFamily],
-            textAlign: "center"
-          }}>
-            {standHeaderText}
-          </div>
-        </div>
-        
-        <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-wrap justify-center items-end gap-2">
-          {pockets.map((pocket, index) => (
-            <div 
-              key={index}
-              className="bg-white/80 border-2 border-gray-300 flex items-center justify-center text-xs font-medium text-gray-600"
-              style={{
-                width: `${pocket.width}px`,
-                height: `${pocket.height}px`
-              }}
-            >
-              {pocket.format}
-            </div>
-          ))}
-        </div>
-        
-        <div className="absolute top-2 right-2 bg-white/90 px-2 py-1 text-xs font-medium text-muted-foreground">
-          {standWidth}×{standHeight} см
-        </div>
-      </div>
-    );
-  };
-
   return (
     <>
       <section id="calculator" className="py-20 bg-muted/30">
@@ -240,327 +117,89 @@ const CalculatorSection = () => {
                   size="lg"
                   variant={selectedCalculator === "banner" ? "default" : "outline"}
                   onClick={() => setSelectedCalculator("banner")}
-                  className="min-w-[200px]"
+                  className="gap-2"
                 >
-                  <Icon name="Image" size={20} className="mr-2" />
+                  <Icon name="Image" size={20} />
                   Баннеры
                 </Button>
                 <Button 
                   size="lg"
                   variant={selectedCalculator === "stand" ? "default" : "outline"}
                   onClick={() => setSelectedCalculator("stand")}
-                  className="min-w-[200px]"
+                  className="gap-2"
                 >
-                  <Icon name="PanelTop" size={20} className="mr-2" />
+                  <Icon name="Clipboard" size={20} />
                   Инфостенды
                 </Button>
                 <Button 
                   size="lg"
                   variant={selectedCalculator === "signage" ? "default" : "outline"}
                   onClick={() => setSelectedCalculator("signage")}
-                  className="min-w-[200px]"
+                  className="gap-2"
                 >
-                  <Icon name="Lightbulb" size={20} className="mr-2" />
+                  <Icon name="Store" size={20} />
                   Вывески
                 </Button>
               </div>
             </div>
             
             {selectedCalculator === "stand" && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <Card className="shadow-xl">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Параметры стенда</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="width">Ширина (см)</Label>
-                        <Input 
-                          id="width"
-                          type="number" 
-                          placeholder="100" 
-                          value={standWidth}
-                          onChange={(e) => setStandWidth(e.target.value)}
-                          min="10"
-                          max="500"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="height">Высота (см)</Label>
-                        <Input 
-                          id="height"
-                          type="number" 
-                          placeholder="100" 
-                          value={standHeight}
-                          onChange={(e) => setStandHeight(e.target.value)}
-                          min="10"
-                          max="500"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="thickness">Толщина ПВХ</Label>
-                      <Select value={standThickness} onValueChange={setStandThickness}>
-                        <SelectTrigger id="thickness">
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="3">3 мм</SelectItem>
-                          <SelectItem value="5">5 мм</SelectItem>
-                          <SelectItem value="10">10 мм</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="printing">Изображение</Label>
-                      <Select value={standPrinting} onValueChange={setStandPrinting}>
-                        <SelectTrigger id="printing">
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="interior">Печать интерьерная без ламинации</SelectItem>
-                          <SelectItem value="exterior">Печать для улицы</SelectItem>
-                          <SelectItem value="laminated">Печать с ламинацией</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="headerText">Текст заголовка</Label>
-                      <Input 
-                        id="headerText"
-                        type="text"
-                        placeholder="ИНФОРМАЦИЯ"
-                        value={standHeaderText}
-                        onChange={(e) => setStandHeaderText(e.target.value)}
-                      />
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="font">Шрифт</Label>
-                        <Select value={standFontFamily} onValueChange={setStandFontFamily}>
-                          <SelectTrigger id="font">
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="sans-serif">Без засечек</SelectItem>
-                            <SelectItem value="serif">С засечками</SelectItem>
-                            <SelectItem value="monospace">Моноширинный</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="bgColor">Цвет фона</Label>
-                        <Select value={standBgColor} onValueChange={setStandBgColor}>
-                          <SelectTrigger id="bgColor">
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="white">Белый</SelectItem>
-                            <SelectItem value="blue">Голубой</SelectItem>
-                            <SelectItem value="gray">Серый</SelectItem>
-                            <SelectItem value="beige">Бежевый</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      <Label>Карманы (опционально)</Label>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="a5" className="text-sm">А5</Label>
-                          <Input 
-                            id="a5"
-                            type="number" 
-                            placeholder="0"
-                            value={pocketsA5}
-                            onChange={(e) => setPocketsA5(e.target.value)}
-                            min="0"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="a4" className="text-sm">А4</Label>
-                          <Input 
-                            id="a4"
-                            type="number" 
-                            placeholder="0"
-                            value={pocketsA4}
-                            onChange={(e) => setPocketsA4(e.target.value)}
-                            min="0"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="a3" className="text-sm">А3</Label>
-                          <Input 
-                            id="a3"
-                            type="number" 
-                            placeholder="0"
-                            value={pocketsA3}
-                            onChange={(e) => setPocketsA3(e.target.value)}
-                            min="0"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="a2" className="text-sm">А2</Label>
-                          <Input 
-                            id="a2"
-                            type="number" 
-                            placeholder="0"
-                            value={pocketsA2}
-                            onChange={(e) => setPocketsA2(e.target.value)}
-                            min="0"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-8 pt-6 border-t">
-                      <div className="flex justify-between items-center text-3xl font-bold mb-4">
-                        <span className="text-secondary">Итого:</span>
-                        <span className="text-primary">
-                          {calculateStandPrice().toLocaleString('ru-RU')} ₽
-                          <sup className="text-lg">*</sup>
-                        </span>
-                      </div>
-                      <p className="text-sm text-muted-foreground mb-4 text-center">
-                        * Стоимость без учета макета, монтажа и других доп. услуг. Менеджер уточнит все требования и особенности заказа.
-                      </p>
-                      <Button className="w-full">
-                        Отправить заявку с расчетом
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="shadow-xl">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Визуализация</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex items-center justify-center min-h-[500px] p-6">
-                    {renderStandPreview()}
-                  </CardContent>
-                </Card>
+              <div className="grid lg:grid-cols-2 gap-8 mb-8">
+                <StandCalculator
+                  standWidth={standWidth}
+                  setStandWidth={setStandWidth}
+                  standHeight={standHeight}
+                  setStandHeight={setStandHeight}
+                  standThickness={standThickness}
+                  setStandThickness={setStandThickness}
+                  standPrinting={standPrinting}
+                  setStandPrinting={setStandPrinting}
+                  standHeaderText={standHeaderText}
+                  setStandHeaderText={setStandHeaderText}
+                  standFontFamily={standFontFamily}
+                  setStandFontFamily={setStandFontFamily}
+                  standBgColor={standBgColor}
+                  setStandBgColor={setStandBgColor}
+                  pocketsA5={pocketsA5}
+                  setPocketsA5={setPocketsA5}
+                  pocketsA4={pocketsA4}
+                  setPocketsA4={setPocketsA4}
+                  pocketsA3={pocketsA3}
+                  setPocketsA3={setPocketsA3}
+                  pocketsA2={pocketsA2}
+                  setPocketsA2={setPocketsA2}
+                  calculateStandPrice={calculateStandPrice}
+                />
+                <StandPreview
+                  standWidth={standWidth}
+                  standHeight={standHeight}
+                  standHeaderText={standHeaderText}
+                  standFontFamily={standFontFamily}
+                  standBgColor={standBgColor}
+                  pocketsA5={pocketsA5}
+                  pocketsA4={pocketsA4}
+                  pocketsA3={pocketsA3}
+                  pocketsA2={pocketsA2}
+                />
               </div>
             )}
             
             {selectedCalculator === "signage" && (
-              <Card className="shadow-xl">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6">Наружная реклама</h3>
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-6">
-                      <div>
-                        <Label className="block mb-2">Ширина (метры)</Label>
-                        <Input 
-                          type="number" 
-                          placeholder="2.0" 
-                          value={signageWidth}
-                          onChange={(e) => setSignageWidth(e.target.value)}
-                          min="0"
-                          step="0.1"
-                        />
-                      </div>
-                      <div>
-                        <Label className="block mb-2">Высота (метры)</Label>
-                        <Input 
-                          type="number" 
-                          placeholder="1.0" 
-                          value={signageHeight}
-                          onChange={(e) => setSignageHeight(e.target.value)}
-                          min="0"
-                          step="0.1"
-                        />
-                      </div>
-                      <div>
-                        <Label className="block mb-2">Тип вывески</Label>
-                        <Select value={signageType} onValueChange={setSignageType}>
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="световой-короб">Световой короб</SelectItem>
-                            <SelectItem value="объемные-буквы">Объемные буквы</SelectItem>
-                            <SelectItem value="плоская-вывеска">Плоская вывеска</SelectItem>
-                            <SelectItem value="неоновая">Неоновая вывеска</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div>
-                        <Label className="block mb-2">Материал</Label>
-                        <Select value={signageMaterial} onValueChange={setSignageMaterial}>
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="акрил">Акрил</SelectItem>
-                            <SelectItem value="композит">Композит</SelectItem>
-                            <SelectItem value="пвх">ПВХ</SelectItem>
-                            <SelectItem value="металл">Металл</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-3">
-                        <div className="flex items-center space-x-2">
-                          <Checkbox 
-                            id="lighting" 
-                            checked={signageLighting}
-                            onCheckedChange={(checked) => setSignageLighting(checked as boolean)}
-                          />
-                          <Label htmlFor="lighting" className="cursor-pointer">
-                            Подсветка
-                          </Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Checkbox 
-                            id="installation" 
-                            checked={signageInstallation}
-                            onCheckedChange={(checked) => setSignageInstallation(checked as boolean)}
-                          />
-                          <Label htmlFor="installation" className="cursor-pointer">
-                            Монтаж
-                          </Label>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="bg-muted/30 rounded-lg p-8 flex flex-col justify-between">
-                      <div>
-                        <h4 className="font-semibold mb-4">Расчёт стоимости:</h4>
-                        <div className="space-y-2 text-sm">
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Площадь:</span>
-                            <span>{(parseFloat(signageWidth || "0") * parseFloat(signageHeight || "0")).toFixed(2)} м²</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Материал:</span>
-                            <span>{signageMaterial}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Тип:</span>
-                            <span>{signageType}</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="mt-8 pt-6 border-t">
-                        <div className="flex justify-between items-center text-3xl font-bold mb-4">
-                          <span className="text-secondary">Итого:</span>
-                          <span className="text-primary">{calculateSignagePrice().toLocaleString('ru-RU')} ₽</span>
-                        </div>
-                        <p className="text-xs text-muted-foreground mb-4">
-                          Стоимость указана ориентировочно. Точная цена уточняется после осмотра объекта.
-                        </p>
-                        <Button className="w-full">
-                          Заказать расчёт
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <SignageCalculator
+                signageWidth={signageWidth}
+                setSignageWidth={setSignageWidth}
+                signageHeight={signageHeight}
+                setSignageHeight={setSignageHeight}
+                signageType={signageType}
+                setSignageType={setSignageType}
+                signageMaterial={signageMaterial}
+                setSignageMaterial={setSignageMaterial}
+                signageLighting={signageLighting}
+                setSignageLighting={setSignageLighting}
+                signageInstallation={signageInstallation}
+                setSignageInstallation={setSignageInstallation}
+                calculateSignagePrice={calculateSignagePrice}
+              />
             )}
             
             {selectedCalculator === "banner" && <BannerCalculator />}
