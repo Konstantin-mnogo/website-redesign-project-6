@@ -1,5 +1,6 @@
 import json
 import smtplib
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from typing import Dict, Any
@@ -73,9 +74,14 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     msg.attach(MIMEText(email_body, 'plain', 'utf-8'))
     
     try:
+        email_password = os.environ.get('EMAIL_PASSWORD', '')
+        
+        if not email_password:
+            raise Exception('EMAIL_PASSWORD not configured')
+        
         server = smtplib.SMTP('smtp.mail.ru', 587)
         server.starttls()
-        server.login('ragrafika.info@mail.ru', 'your_password_here')
+        server.login('ragrafika.info@mail.ru', email_password)
         server.send_message(msg)
         server.quit()
         
