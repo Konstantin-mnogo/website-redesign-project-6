@@ -36,7 +36,7 @@ const services = [
 
 const advantages = [
   { number: "11+", text: "лет на рынке" },
-  { number: "До 3-х лет", text: "гарантия на продукцию" },
+  { number: "до 3-х", subtext: "лет", text: "гарантия на продукцию" },
   { number: "2000+", text: "реализованных проектов" }
 ];
 
@@ -153,10 +153,13 @@ const ContentSections = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Почему выбирают нас</h2>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {advantages.map((adv, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-3">{adv.number}</div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-3">
+                  {adv.number}
+                  {adv.subtext && <span className="text-lg ml-2 text-white/90">{adv.subtext}</span>}
+                </div>
                 <div className="text-lg text-white/90">{adv.text}</div>
               </div>
             ))}
