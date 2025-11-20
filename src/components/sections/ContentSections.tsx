@@ -36,7 +36,7 @@ const services = [
 
 const advantages = [
   { number: "11+", text: "лет на рынке" },
-  { number: "до 3-х", subtext: "лет", text: "гарантия на продукцию" },
+  { number: "до 3-х лет", text: "гарантия на продукцию" },
   { number: "2000+", text: "реализованных проектов" }
 ];
 
@@ -155,10 +155,13 @@ const ContentSections = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             {advantages.map((adv, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-3">
+              <div 
+                key={index} 
+                className="text-center animate-fade-in"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-3 animate-scale-in">
                   {adv.number}
-                  {adv.subtext && <span className="text-lg ml-2 text-white/90">{adv.subtext}</span>}
                 </div>
                 <div className="text-lg text-white/90">{adv.text}</div>
               </div>
