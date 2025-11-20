@@ -1,0 +1,39 @@
+{
+  "tests": [
+    {
+      "name": "Test OPTIONS request",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test POST with valid data",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Test User",
+        "phone": "+79991234567",
+        "message": "Test message"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test POST without required fields",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "message": "Test message"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
