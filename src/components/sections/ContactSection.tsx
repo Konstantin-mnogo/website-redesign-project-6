@@ -55,7 +55,7 @@ const ContactSection = () => {
                     className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                   />
                   <Textarea 
-                    placeholder="Расскажите о вашем проекте" 
+                    placeholder="Напишите ваш вопрос" 
                     className="bg-white/10 border-white/20 text-white placeholder:text-white/50 min-h-32"
                   />
                   <Button size="lg" className="w-full bg-primary hover:bg-primary/90">
