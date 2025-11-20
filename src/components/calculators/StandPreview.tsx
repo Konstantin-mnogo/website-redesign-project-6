@@ -65,7 +65,7 @@ const StandPreview = ({
     
     const pockets = [];
     
-    for (let i = 0; i < parseInt(pocketsA5); i++) {
+    for (let i = 0; i < (parseInt(pocketsA5) || 0); i++) {
       const pocket = pocketSizes["A5"];
       pockets.push({ 
         format: "A5", 
@@ -73,7 +73,7 @@ const StandPreview = ({
         height: (pocket.heightMm / 10) * scale
       });
     }
-    for (let i = 0; i < parseInt(pocketsA4); i++) {
+    for (let i = 0; i < (parseInt(pocketsA4) || 0); i++) {
       const pocket = pocketSizes["A4"];
       pockets.push({ 
         format: "A4", 
@@ -81,7 +81,7 @@ const StandPreview = ({
         height: (pocket.heightMm / 10) * scale
       });
     }
-    for (let i = 0; i < parseInt(pocketsA3); i++) {
+    for (let i = 0; i < (parseInt(pocketsA3) || 0); i++) {
       const pocket = pocketSizes["A3"];
       pockets.push({ 
         format: "A3", 
@@ -89,7 +89,7 @@ const StandPreview = ({
         height: (pocket.heightMm / 10) * scale
       });
     }
-    for (let i = 0; i < parseInt(pocketsA2); i++) {
+    for (let i = 0; i < (parseInt(pocketsA2) || 0); i++) {
       const pocket = pocketSizes["A2"];
       pockets.push({ 
         format: "A2", 

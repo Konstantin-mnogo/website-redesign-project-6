@@ -16,10 +16,10 @@ const CalculatorSection = () => {
   const [standHeaderText, setStandHeaderText] = useState<string>("ИНФОРМАЦИЯ");
   const [standFontFamily, setStandFontFamily] = useState<string>("sans-serif");
   const [standBgColor, setStandBgColor] = useState<string>("white");
-  const [pocketsA5, setPocketsA5] = useState<string>("0");
-  const [pocketsA4, setPocketsA4] = useState<string>("0");
-  const [pocketsA3, setPocketsA3] = useState<string>("0");
-  const [pocketsA2, setPocketsA2] = useState<string>("0");
+  const [pocketsA5, setPocketsA5] = useState<string>("");
+  const [pocketsA4, setPocketsA4] = useState<string>("");
+  const [pocketsA3, setPocketsA3] = useState<string>("");
+  const [pocketsA2, setPocketsA2] = useState<string>("");
 
   const [signageWidth, setSignageWidth] = useState<string>("");
   const [signageHeight, setSignageHeight] = useState<string>("");
@@ -59,10 +59,10 @@ const CalculatorSection = () => {
     
     price += area * printingPrices[standPrinting];
     
-    price += parseInt(pocketsA5) * pocketPrices["A5"];
-    price += parseInt(pocketsA4) * pocketPrices["A4"];
-    price += parseInt(pocketsA3) * pocketPrices["A3"];
-    price += parseInt(pocketsA2) * pocketPrices["A2"];
+    price += (parseInt(pocketsA5) || 0) * pocketPrices["A5"];
+    price += (parseInt(pocketsA4) || 0) * pocketPrices["A4"];
+    price += (parseInt(pocketsA3) || 0) * pocketPrices["A3"];
+    price += (parseInt(pocketsA2) || 0) * pocketPrices["A2"];
     
     return Math.round(price);
   };
