@@ -28,7 +28,9 @@ const ContactSection = () => {
                 <CardContent className="p-6 text-center">
                   <Icon name="Mail" size={32} className="mx-auto mb-4 text-primary" />
                   <h3 className="font-bold mb-2 text-white">Email</h3>
-                  <p className="text-white">info@grafika.ru</p>
+                  <a href="mailto:ragrafika.info@mail.ru" className="text-white hover:text-primary transition-colors">
+                    ragrafika.info@mail.ru
+                  </a>
                 </CardContent>
               </Card>
               <Card className="bg-white/10 border-white/20">
@@ -106,9 +108,9 @@ const ContactSection = () => {
                   <Icon name="Phone" size={16} className="mt-0.5 flex-shrink-0" />
                   <span>+7 (4162) 22-76-78</span>
                 </a>
-                <a href="mailto:info@grafika.ru" className="flex items-start gap-2 hover:text-primary transition-colors">
+                <a href="mailto:ragrafika.info@mail.ru" className="flex items-start gap-2 hover:text-primary transition-colors">
                   <Icon name="Mail" size={16} className="mt-0.5 flex-shrink-0" />
-                  <span>info@grafika.ru</span>
+                  <span>ragrafika.info@mail.ru</span>
                 </a>
                 <div className="flex items-start gap-2">
                   <Icon name="MapPin" size={16} className="mt-0.5 flex-shrink-0" />
@@ -118,7 +120,7 @@ const ContactSection = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>&copy; 2024 Графика. Все права защищены.</p>
+            <p>&copy; 2025 Рекламное агентство Графика. Все права защищены.</p>
           </div>
         </div>
       </footer>

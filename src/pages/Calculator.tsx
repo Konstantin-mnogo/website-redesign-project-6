@@ -136,7 +136,7 @@ const Calculator = () => {
             </div>
           </div>
           <div className="text-center mt-8 text-sm text-gray-400">
-            © 2024 Графика. Все права защищены.
+            © 2025 Рекламное агентство Графика. Все права защищены.
           </div>
         </div>
       </footer>
