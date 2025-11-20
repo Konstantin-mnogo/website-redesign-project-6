@@ -28,9 +28,11 @@ const Calculator = () => {
             <a href="/#contacts" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Контакты</a>
           </nav>
           <div className="flex items-center gap-3 flex-shrink-0">
-            <Button size="lg" className="hidden lg:flex">
-              <Icon name="Phone" size={18} className="mr-2" />
-              Позвонить
+            <Button size="lg" className="hidden lg:flex" asChild>
+              <a href="tel:+73412345678">
+                <Icon name="Phone" size={18} className="mr-2" />
+                +7 (341) 234-56-78
+              </a>
             </Button>
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -89,9 +91,11 @@ const Calculator = () => {
                   >
                     Контакты
                   </a>
-                  <Button size="lg" className="mt-4">
-                    <Icon name="Phone" size={18} className="mr-2" />
-                    Позвонить
+                  <Button size="lg" className="mt-4" asChild>
+                    <a href="tel:+73412345678">
+                      <Icon name="Phone" size={18} className="mr-2" />
+                      +7 (341) 234-56-78
+                    </a>
                   </Button>
                 </nav>
               </SheetContent>
