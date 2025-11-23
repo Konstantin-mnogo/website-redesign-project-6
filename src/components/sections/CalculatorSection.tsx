@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import BannerCalculator from "@/components/BannerCalculator";
 import StandCalculator from "@/components/calculators/StandCalculator";
 import SignageCalculator from "@/components/calculators/SignageCalculator";
 import StandPreview from "@/components/calculators/StandPreview";
@@ -115,15 +114,6 @@ const CalculatorSection = () => {
               <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4 mb-6 md:mb-8">
                 <Button 
                   size="lg"
-                  variant={selectedCalculator === "banner" ? "default" : "outline"}
-                  onClick={() => setSelectedCalculator("banner")}
-                  className="gap-2 w-full sm:w-auto"
-                >
-                  <Icon name="Image" size={20} />
-                  Баннеры
-                </Button>
-                <Button 
-                  size="lg"
                   variant={selectedCalculator === "stand" ? "default" : "outline"}
                   onClick={() => setSelectedCalculator("stand")}
                   className="gap-2 w-full sm:w-auto"
@@ -201,8 +191,6 @@ const CalculatorSection = () => {
                 calculateSignagePrice={calculateSignagePrice}
               />
             )}
-            
-            {selectedCalculator === "banner" && <BannerCalculator />}
           </div>
         </div>
       </section>
