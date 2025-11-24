@@ -114,27 +114,7 @@ const VolumeLettersCalculator = ({
                   {calculatePrice().toLocaleString('ru-RU')} ₽
                 </span>
               </div>
-              <div className="border-t pt-3 space-y-1 text-sm text-muted-foreground">
-                {needsBracket && (
-                  <div className="flex justify-between">
-                    <span>Панель-кронштейн:</span>
-                    <span>15 000 ₽</span>
-                  </div>
-                )}
-                {needsLighting && (
-                  <div className="flex justify-between">
-                    <span>Световая подсветка:</span>
-                    <span>20 000 ₽</span>
-                  </div>
-                )}
-                {needsInstallation && (
-                  <div className="flex justify-between">
-                    <span>Монтаж:</span>
-                    <span>10 000 ₽</span>
-                  </div>
-                )}
-              </div>
-              <p className="text-xs text-muted-foreground border-t pt-3">
+              <p className="text-xs text-muted-foreground">
                 * Итоговая стоимость зависит от типа подсветки и сложности монтажа
               </p>
             </div>
