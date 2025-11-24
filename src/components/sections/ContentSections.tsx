@@ -220,10 +220,10 @@ const ContentSections = () => {
               Что говорят о нас наши клиенты
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 opacity-50 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Icon key={i} name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
@@ -237,6 +237,30 @@ const ContentSections = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a 
+              href="https://yandex.ru/maps/org/grafika/1326700931/reviews/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-200 rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300 group"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm3.9 16.5h-2.6V7.8c0-1.5-.9-2.3-2.1-2.3-.9 0-1.5.5-1.8 1.2v9.8H6.8V5.2h2.6v1.1c.6-.8 1.5-1.3 2.7-1.3 2.1 0 3.8 1.5 3.8 4.2v7.3z"/>
+              </svg>
+              <span className="font-medium group-hover:text-primary transition-colors">Отзывы на Яндекс.Картах</span>
+            </a>
+            <a 
+              href="https://2gis.ru/blagoveshchensk/firm/70000001018265902/tab/reviews" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-200 rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300 group"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+              </svg>
+              <span className="font-medium group-hover:text-primary transition-colors">Отзывы на 2ГИС</span>
+            </a>
           </div>
         </div>
       </section>
