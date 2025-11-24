@@ -190,7 +190,12 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8">
+          <div className="border-t border-gray-800 pt-8 space-y-6">
+            <div className="text-gray-500 text-xs leading-relaxed max-w-4xl mx-auto text-center">
+              <p>
+                Вся представленная на сайте информация, касающаяся стоимости товаров и услуг, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации о стоимости и условиях, пожалуйста, обращайтесь к менеджерам.
+              </p>
+            </div>
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
               <p>&copy; 2025 Рекламное агентство Графика. Все права защищены.</p>
               <div className="flex gap-6">
