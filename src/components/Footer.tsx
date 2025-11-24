@@ -30,7 +30,6 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Калькуляторы</h4>
             <nav className="space-y-2">
               <a href="/calculator" className="block text-gray-400 hover:text-primary transition-colors text-sm">Все калькуляторы</a>
-              <a href="/calculator#banner" className="block text-gray-400 hover:text-primary transition-colors text-sm">Баннеры</a>
               <a href="/calculator#stand" className="block text-gray-400 hover:text-primary transition-colors text-sm">Информационные стенды</a>
               <a href="/calculator#signage" className="block text-gray-400 hover:text-primary transition-colors text-sm">Вывески</a>
             </nav>
