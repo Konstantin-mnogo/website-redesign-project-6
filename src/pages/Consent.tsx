@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Footer from '@/components/Footer';
 
 const Consent = () => {
   return (
@@ -130,6 +131,7 @@ const Consent = () => {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Footer from '@/components/Footer';
 
 const Privacy = () => {
   return (
@@ -100,6 +101,7 @@ const Privacy = () => {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

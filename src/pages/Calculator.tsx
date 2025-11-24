@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import CalculatorSection from "@/components/sections/CalculatorSection";
+import Footer from "@/components/Footer";
 
 const Calculator = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -119,27 +120,7 @@ const Calculator = () => {
         <CalculatorSection />
       </div>
 
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center">
-              <img 
-                src="https://cdn.poehali.dev/files/7cf77388-efea-4dbb-b3ab-3fe7c87d39b8.png" 
-                alt="Графика" 
-                className="h-10 w-auto brightness-0 invert"
-              />
-            </div>
-            <div className="flex gap-8">
-              <a href="/" className="text-sm hover:text-primary transition-colors">Главная</a>
-              <a href="/#services" className="text-sm hover:text-primary transition-colors">Услуги</a>
-              <a href="/#contacts" className="text-sm hover:text-primary transition-colors">Контакты</a>
-            </div>
-          </div>
-          <div className="text-center mt-8 text-sm text-gray-400">
-            © 2025 Рекламное агентство Графика. Все права защищены.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
