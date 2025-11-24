@@ -28,7 +28,7 @@ const Calculator = () => {
             <a href="/#testimonials" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Отзывы</a>
             <a href="/#contacts" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Контакты</a>
           </nav>
-          <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="flex items-center gap-3 flex-shrink-0 relative z-[60]">
             <Button size="lg" className="hidden md:flex" asChild>
               <a href="tel:+74162227678">
                 <Icon name="Phone" size={18} className="mr-2" />
