@@ -22,9 +22,9 @@ const Index = () => {
           </div>
           <nav className="hidden md:flex gap-6 xl:gap-8 flex-1 justify-center">
             <a href="#services" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Услуги</a>
+            <a href="#calculators" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Калькуляторы</a>
             <a href="#portfolio" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Портфолио</a>
             <a href="#advantages" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Преимущества</a>
-            <a href="/calculator" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Калькуляторы</a>
             <a href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Отзывы</a>
             <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Контакты</a>
           </nav>
@@ -51,6 +51,13 @@ const Index = () => {
                     Услуги
                   </a>
                   <a 
+                    href="#calculators" 
+                    className="text-lg font-medium hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Калькуляторы
+                  </a>
+                  <a 
                     href="#portfolio" 
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
@@ -63,13 +70,6 @@ const Index = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Преимущества
-                  </a>
-                  <a 
-                    href="/calculator" 
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Калькуляторы
                   </a>
                   <a 
                     href="#testimonials" 
