@@ -37,18 +37,18 @@ const CalculatorsBlockSection = () => {
           {calculators.map((calculator, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary flex flex-col h-full"
+              className="group hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-3 border-2 hover:border-primary flex flex-col h-full"
             >
               <CardContent className="p-8 flex flex-col flex-1">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-500 ease-out">
                   <Icon name={calculator.icon} size={32} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{calculator.title}</h3>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-500">{calculator.title}</h3>
                 <p className="text-muted-foreground mb-6 flex-1">{calculator.description}</p>
-                <Button asChild className="w-full">
+                <Button asChild className="w-full group-hover:shadow-lg transition-all duration-500">
                   <a href={calculator.link}>
                     Рассчитать
-                    <Icon name="ArrowRight" size={18} className="ml-2" />
+                    <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-1 transition-transform duration-500" />
                   </a>
                 </Button>
               </CardContent>
