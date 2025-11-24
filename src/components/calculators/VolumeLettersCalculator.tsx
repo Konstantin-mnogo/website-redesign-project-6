@@ -219,7 +219,11 @@ const VolumeLettersCalculator = ({
                   textShadow: viewMode === 'night' && needsLighting 
                     ? '0 0 30px rgba(255,255,255,0.9), 0 0 50px rgba(255,255,255,0.7), 0 0 70px rgba(255,255,255,0.5)'
                     : '3px 3px 6px rgba(0,0,0,0.4)',
-                  filter: viewMode === 'night' && needsLighting ? 'brightness(1.4)' : 'none',
+                  filter: viewMode === 'night' && needsLighting 
+                    ? 'brightness(1.4)' 
+                    : viewMode === 'night' 
+                      ? 'brightness(0.2)' 
+                      : 'none',
                   letterSpacing: '0.15em'
                 }}
               >
