@@ -207,10 +207,6 @@ const VolumeLettersCalculator = ({
             {viewMode === 'day' && (
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1),transparent_70%)]" />
             )}
-            
-            {viewMode === 'night' && (
-              <div className="absolute top-10 right-10 w-16 h-16 bg-yellow-100 rounded-full blur-sm opacity-60" />
-            )}
 
             <div className="relative w-full flex items-center justify-center">
               <span 
