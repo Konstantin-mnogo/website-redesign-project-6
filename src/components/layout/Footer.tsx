@@ -74,9 +74,9 @@ const Footer = () => {
                 <Icon name="Phone" size={18} />
                 8 (4162) 22-76-78
               </a>
-              <a href="mailto:info@grafika28.ru" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="mailto:ragrafika.ifo@mail.ru" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Icon name="Mail" size={18} />
-                info@grafika28.ru
+                ragrafika.ifo@mail.ru
               </a>
               <p className="flex items-start gap-2">
                 <Icon name="MapPin" size={18} className="mt-1 flex-shrink-0" />
