@@ -4,7 +4,6 @@ import Icon from "@/components/ui/icon";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import Footer from "@/components/Footer";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
@@ -139,8 +138,6 @@ const ContactSection = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };
