@@ -3,37 +3,44 @@ import Icon from "@/components/ui/icon";
 import { useCountUp } from "@/hooks/useCountUp";
 import CalculatorsBlockSection from "./CalculatorsBlockSection";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: "Store",
     title: "Вывески и световые короба",
-    description: "Объёмные буквы, светодиодные вывески, брендирование фасадов"
+    description: "Объёмные буквы, светодиодные вывески, брендирование фасадов",
+    path: "/signage"
   },
   {
     icon: "Home",
     title: "Интерьерная реклама",
-    description: "Оформление офисов, навигация, информационные стенды"
+    description: "Оформление офисов, навигация, информационные стенды",
+    path: "/interior"
   },
   {
     icon: "Truck",
     title: "Брендирование транспорта",
-    description: "Частичная оклейка коммерческих авто виниловой плёнкой"
+    description: "Частичная оклейка коммерческих авто виниловой плёнкой",
+    path: "/transport"
   },
   {
     icon: "Flag",
     title: "Баннеры и штендеры",
-    description: "Широкоформатная печать, мобильные рекламные конструкции"
+    description: "Широкоформатная печать, мобильные рекламные конструкции",
+    path: "/banners"
   },
   {
     icon: "PenTool",
     title: "Разработка дизайна",
-    description: "Разработка дизайна и согласование вывесок в администрации. Создание макетов, фирменный стиль"
+    description: "Разработка дизайна и согласование вывесок в администрации. Создание макетов, фирменный стиль",
+    path: "/design"
   },
   {
     icon: "Wrench",
     title: "Монтаж и установка",
-    description: "Профессиональный монтаж рекламных конструкций"
+    description: "Профессиональный монтаж рекламных конструкций",
+    path: "/installation"
   }
 ];
 
@@ -119,18 +126,19 @@ const ContentSections = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary"
-              >
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                    <Icon name={service.icon} size={32} className="text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </CardContent>
-              </Card>
+              <Link key={index} to={service.path}>
+                <Card 
+                  className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary h-full cursor-pointer"
+                >
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                      <Icon name={service.icon} size={32} className="text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                    <p className="text-muted-foreground">{service.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
