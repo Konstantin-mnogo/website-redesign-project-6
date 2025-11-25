@@ -126,19 +126,24 @@ const ContentSections = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Link key={index} to={service.path}>
-                <Card 
-                  className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary h-full cursor-pointer"
-                >
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                      <Icon name={service.icon} size={32} className="text-primary" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                    <p className="text-muted-foreground">{service.description}</p>
-                  </CardContent>
-                </Card>
-              </Link>
+              <Card 
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary h-full flex flex-col"
+              >
+                <CardContent className="p-8 flex flex-col flex-grow">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                    <Icon name={service.icon} size={32} className="text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground mb-6 flex-grow">{service.description}</p>
+                  <Link to={service.path}>
+                    <button className="w-full bg-primary text-white py-3 px-6 rounded-xl font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+                      Подробнее
+                      <Icon name="ArrowRight" size={20} />
+                    </button>
+                  </Link>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
