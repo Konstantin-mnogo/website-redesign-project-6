@@ -30,7 +30,7 @@ const VolumeLettersCalculator = ({
 }: VolumeLettersCalculatorProps) => {
   const [viewMode, setViewMode] = useState<'day' | 'night'>('day');
   
-  const displayText = (signText || 'ПРОДУКТЫ').toUpperCase();
+  const displayText = (signText || 'ПРОДУКТЫ').toUpperCase().slice(0, 20);
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -45,9 +45,10 @@ const VolumeLettersCalculator = ({
                 onChange={(e) => setSignText(e.target.value)}
                 placeholder="Введите текст для вывески"
                 className="text-lg uppercase"
+                maxLength={20}
               />
               <p className="text-xs text-muted-foreground mt-2">
-                Текст будет автоматически преобразован в заглавные буквы
+                Максимум 20 символов. Текст будет автоматически преобразован в заглавные буквы
               </p>
             </div>
 
@@ -184,15 +185,15 @@ const VolumeLettersCalculator = ({
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1),transparent_70%)]" />
             )}
 
-            <div className="relative w-full flex items-center justify-center overflow-hidden px-4">
+            <div className="relative w-full flex items-center justify-center overflow-hidden px-2">
               <span 
-                className="text-white"
+                className="text-white whitespace-nowrap"
                 style={{
                   fontFamily: "'Geometria', sans-serif",
                   fontWeight: 700,
                   fontSize: displayText.length > 12 
-                    ? `clamp(1rem, ${Math.max(1.5, 10 / Math.max(displayText.length / 10, 1))}vw, 2.5rem)`
-                    : `clamp(1.5rem, ${Math.max(2.5, 14 / Math.max(displayText.length / 7, 1))}vw, 3.5rem)`,
+                    ? `clamp(0.875rem, ${Math.max(1.2, 8 / Math.max(displayText.length / 10, 1))}vw, 2rem)`
+                    : `clamp(1.25rem, ${Math.max(2, 12 / Math.max(displayText.length / 7, 1))}vw, 3rem)`,
                   textTransform: 'uppercase',
                   textShadow: viewMode === 'night' && needsLighting 
                     ? '0 0 20px rgba(255,255,255,0.9), 0 0 35px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.5)'
@@ -203,10 +204,8 @@ const VolumeLettersCalculator = ({
                       ? 'brightness(0.2)' 
                       : 'none',
                   letterSpacing: '0.03em',
-                  wordWrap: 'break-word',
                   maxWidth: '100%',
-                  textAlign: 'center',
-                  lineHeight: 1.2
+                  transform: displayText.length > 12 ? 'scale(0.95)' : 'scale(1)'
                 }}
               >
                 {displayText}
