@@ -223,13 +223,13 @@ const VolumeLettersCalculator = ({
             <div className="bg-muted/30 rounded-lg p-3">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Icon name="Box" size={16} className="flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Глубина: 50-80 мм</span>
+                <span className="text-xs sm:text-sm">Глубина: 50-70 мм</span>
               </div>
             </div>
             <div className="bg-muted/30 rounded-lg p-3">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Icon name="Layers" size={16} className="flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Материал: акрил/ПВХ</span>
+                <span className="text-xs sm:text-sm">Материал: акрил/ПВХ/алюминий</span>
               </div>
             </div>
             <div className="bg-muted/30 rounded-lg p-3">
