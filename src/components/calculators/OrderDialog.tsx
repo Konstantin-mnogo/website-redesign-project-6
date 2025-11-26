@@ -26,6 +26,7 @@ const OrderDialog = ({ calculatorType, price, details, children, imageData, onIm
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [consent, setConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -66,6 +67,7 @@ const OrderDialog = ({ calculatorType, price, details, children, imageData, onIm
       setName("");
       setPhone("");
       setEmail("");
+      setConsent(false);
       setOpen(false);
     } catch (error) {
       toast({
@@ -122,7 +124,22 @@ const OrderDialog = ({ calculatorType, price, details, children, imageData, onIm
               placeholder="mail@example.com"
             />
           </div>
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
+          <div className="bg-muted/30 rounded-lg p-4">
+            <div className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="consent-dialog"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                required
+                className="mt-1 w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary"
+              />
+              <label htmlFor="consent-dialog" className="text-sm text-muted-foreground leading-relaxed">
+                Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <a href="/consent" className="text-primary hover:underline" target="_blank">Согласии на обработку персональных данных</a> *
+              </label>
+            </div>
+          </div>
+          <Button type="submit" className="w-full" disabled={isSubmitting || !consent}>
             {isSubmitting ? "Отправка..." : "Отправить заявку"}
           </Button>
         </form>
