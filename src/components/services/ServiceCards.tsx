@@ -12,37 +12,37 @@ const ServiceCards = ({ excludeService }: ServiceCardsProps) => {
       id: 'signage',
       icon: 'Store',
       title: 'Вывески и световые короба',
-      link: '/services/signage'
+      link: '/signage'
     },
     {
       id: 'interior',
       icon: 'Home',
       title: 'Интерьерная реклама',
-      link: '/services/interior'
+      link: '/interior'
     },
     {
       id: 'transport',
       icon: 'Truck',
       title: 'Брендирование транспорта',
-      link: '/services/transport'
+      link: '/transport'
     },
     {
       id: 'banners',
       icon: 'Flag',
       title: 'Баннеры и штендеры',
-      link: '/services/banners'
+      link: '/banners'
     },
     {
       id: 'design',
       icon: 'PenTool',
       title: 'Разработка дизайна',
-      link: '/services/design'
+      link: '/design'
     },
     {
       id: 'installation',
       icon: 'Wrench',
       title: 'Монтаж и установка',
-      link: '/services/installation'
+      link: '/installation'
     }
   ];
 
