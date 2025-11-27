@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ServiceCards from "@/components/services/ServiceCards";
+import ServiceContactForm from "@/components/services/ServiceContactForm";
 
 const Design = () => {
   return (
@@ -112,6 +113,10 @@ const Design = () => {
             </div>
 
             <ServiceCards excludeService="design" />
+            
+            <div className="mt-8">
+              <ServiceContactForm />
+            </div>
           </div>
         </div>
       </main>
