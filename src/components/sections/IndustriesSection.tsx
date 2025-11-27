@@ -160,7 +160,7 @@ const IndustriesSection = () => {
                 className="border-2 cursor-pointer transition-all hover:border-primary hover:shadow-lg"
                 onClick={() => {
                   setSelectedIndustry(industry.title);
-                  setFormData({ ...formData, industry: industry.title });
+                  setFormData(prev => ({ ...prev, industry: industry.title }));
                   setIsDialogOpen(true);
                 }}
               >
@@ -182,7 +182,7 @@ const IndustriesSection = () => {
             <button
               onClick={() => {
                 setSelectedIndustry('');
-                setFormData({ ...formData, industry: '' });
+                setFormData(prev => ({ ...prev, industry: '' }));
                 setIsDialogOpen(true);
               }}
               className="inline-flex items-center gap-2 bg-primary text-white py-4 px-8 rounded-xl font-semibold hover:bg-primary/90 transition-colors"
