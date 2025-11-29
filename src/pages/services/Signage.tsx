@@ -279,6 +279,72 @@ const Signage = () => {
               </div>
             </div>
 
+            <div className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Частые вопросы</h2>
+              
+              <div className="space-y-4">
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько стоит вывеска?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Стоимость зависит от размера, типа конструкции, материалов и наличия подсветки. Простые объёмные буквы без подсветки — от 15 000 ₽. С подсветкой контражур — от 35 000 ₽. Для точного расчёта позвоните или оставьте заявку — подготовим коммерческое предложение.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Как долго изготавливается вывеска?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Стандартный срок — 7–14 рабочих дней с момента утверждения макета. Сложные конструкции с нестандартными элементами — до 21 дня. Если нужно срочно — можем сделать за 5–7 дней за доплату.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Нужно ли согласовывать вывеску?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, в большинстве случаев требуется согласование с администрацией города. Мы поможем собрать все необходимые документы и получить разрешение. Срок согласования — обычно 2–4 недели, зависит от региона.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Какую гарантию вы даёте?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    На изготовление и монтаж — 1 год. На светодиодные модули и блоки питания — 2 года. В течение гарантийного срока бесплатно устраняем любые неисправности, возникшие не по вине клиента.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Можно ли установить вывеску зимой?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, мы работаем круглый год. Монтаж возможен при температуре до -15°C. Используем специальные морозостойкие материалы и клеи. При очень низких температурах можем перенести монтаж на весну без доплаты.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько служит вывеска?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    При правильной эксплуатации — 5–10 лет. Светодиодная подсветка служит 50 000+ часов (около 10 лет при работе 12 часов в сутки). Рекомендуем раз в год проводить профилактику — мойку и проверку креплений.
+                  </div>
+                </details>
+              </div>
+            </div>
+
             <ServiceCards excludeService="signage" />
             
             <div className="mt-8">

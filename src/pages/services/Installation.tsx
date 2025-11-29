@@ -298,6 +298,62 @@ const Installation = () => {
               </Button>
             </div>
 
+            <div className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Частые вопросы</h2>
+              
+              <div className="space-y-4">
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько стоит монтаж вывески?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Цена зависит от высоты, сложности конструкции и наличия электрики. Простой монтаж на высоте до 3 м — от 3 000 ₽. Высотные работы (3–10 м) — от 8 000 ₽. С использованием автовышки или крана — от 15 000 ₽. Электромонтаж с подключением — от 5 000 ₽.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Как быстро можете установить вывеску?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Простая вывеска без подсветки — за 1 день. С подсветкой и подключением электричества — 1–2 дня. Сложные конструкции на большой высоте — 2–3 дня. Зависит от погодных условий и сложности фасада. При срочном монтаже — доплата 20%.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Работаете ли в выходные и праздники?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, можем установить вывеску в выходные или праздничные дни. Это удобно, если не хотите останавливать работу офиса или магазина. Монтаж в выходные — с доплатой 30%. Необходимо забронировать заранее. Также можем работать в ночное время.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Какую гарантию даёте на монтаж?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Гарантия на монтажные работы — 1 год. На электромонтаж — 2 года. Гарантия покрывает: надёжность креплений, качество электрических соединений, работу подсветки. В течение гарантийного срока бесплатно устраняем любые дефекты монтажа.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Нужно ли обесточивать вывеску?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    При подключении к электросети здания — не нужно, мы подключимся к вашему щитку. Если требуется отдельное подключение к сетям — поможем оформить заявку в энергокомпанию. Вывески со светодиодной подсветкой потребляют мало электроэнергии — 50–200 Вт.
+                  </div>
+                </details>
+              </div>
+            </div>
+
             <ServiceCards excludeService="installation" />
             
             <div className="mt-8">

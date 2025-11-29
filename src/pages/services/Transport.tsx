@@ -298,6 +298,62 @@ const Transport = () => {
               </Button>
             </div>
 
+            <div className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Частые вопросы</h2>
+              
+              <div className="space-y-4">
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько стоит оклейка авто?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Частичная оклейка (борта + двери) легкового авто — от 12 000 ₽. Полная оклейка фургона — от 45 000 ₽. Перфорированная плёнка на стёкла — от 5 000 ₽. Точная цена зависит от модели авто, площади оклейки и сложности дизайна.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Как долго держится плёнка на авто?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Качественная виниловая плёнка служит 3–5 лет. Не боится моек, дождя, снега и солнца. Можно мыть на автомойке (избегайте мойки высокого давления на краях плёнки). При правильной эксплуатации плёнка сохраняет яркость все это время.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Можно ли снять плёнку без повреждения краски?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, качественная плёнка снимается без повреждений. Нагреваем плёнку феном и аккуратно снимаем. Краска остаётся неповреждённой. Может остаться немного клея — убирается специальным очистителем. Важно: заводская краска должна быть в хорошем состоянии.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Нужно ли регистрировать рекламу на авто?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    По ПДД запрещено закрывать стёкла и номера. Реклама на бортах и дверях — разрешена. Если меняете цвет авто более чем на 50% — нужно внести изменения в ПТС. Простая рекламная оклейка без изменения цвета кузова — регистрации не требует.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько времени занимает оклейка?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Частичная оклейка легкового авто — 1–2 дня. Полная оклейка фургона — 3–5 дней. Включает подготовку (мойка, обезжиривание), наклейку и прогрев. После оклейки рекомендуем не мыть авто 2–3 дня для полной полимеризации клея.
+                  </div>
+                </details>
+              </div>
+            </div>
+
             <ServiceCards excludeService="transport" />
             
             <div className="mt-8">

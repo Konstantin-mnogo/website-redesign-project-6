@@ -293,6 +293,62 @@ const Interior = () => {
               </div>
             </div>
 
+            <div className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Частые вопросы</h2>
+              
+              <div className="space-y-4">
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько стоят информационные стенды?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Напольные стенды с карманами — от 3 500 ₽. Настольные мини-стенды — от 800 ₽. Настенные панели — от 2 500 ₽. Уличные стенды с защитой — от 8 000 ₽. Цена зависит от размера, материала и количества карманов.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Можно ли заказать стенд по своим размерам?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, мы изготавливаем стенды по индивидуальным размерам. Можно выбрать любой формат, расположение и количество карманов. Покажем макет до изготовления. Срок изготовления нестандартных стендов — 5–7 рабочих дней.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Как ухаживать за стендом?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Протирайте поверхность влажной тканью раз в 1–2 недели. Не используйте абразивные средства. Карманы можно мыть мыльным раствором. Раз в месяц проверяйте крепления карманов и устойчивость конструкции. При правильном уходе стенд служит 5+ лет.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Есть ли готовые решения для офиса?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, у нас есть готовые комплекты для офисов разного размера. В комплект входят: стенд для зоны ожидания, настольные держатели для ресепшн, настенные панели для коридоров. При заказе комплекта — скидка 10%.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Можно ли заменить информацию в стенде?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, это основное преимущество стендов. В карманах можно менять листовки хоть каждый день. Для настенных панелей с рамками — просто открываете рамку и меняете лист. Никаких специальных навыков не нужно.
+                  </div>
+                </details>
+              </div>
+            </div>
+
             <ServiceCards excludeService="interior" />
             
             <div className="mt-8">

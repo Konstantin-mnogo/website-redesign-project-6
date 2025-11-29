@@ -283,6 +283,62 @@ const Design = () => {
               </div>
             </div>
 
+            <div className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Частые вопросы</h2>
+              
+              <div className="space-y-4">
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько стоит разработка дизайна вывески?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Дизайн-макет с 1–2 вариантами — от 5 000 ₽. 3D-визуализация на вашем фасаде — от 3 000 ₽. Разработка полного фирменного стиля с брендбуком — от 25 000 ₽. При заказе полного цикла (дизайн + производство) — дизайн в подарок.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько занимает согласование вывески?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Срок зависит от региона и сложности объекта. В среднем — 2–4 недели. Для исторических зданий или центральных улиц — до 2 месяцев. Мы поможем собрать все документы и подадим заявку. Можем сопровождать процесс от начала до конца.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Можно ли вносить правки в дизайн?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, правки возможны на любом этапе до утверждения макета. В стоимость включены 2–3 круга правок. Можно менять цвета, шрифты, расположение элементов. После утверждения и начала производства — изменения оплачиваются отдельно.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Нужно ли предоставлять логотип?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Желательно предоставить логотип в векторном формате (AI, EPS, SVG). Если есть только растр (JPG, PNG) — можем перевести в вектор за доплату 1 000–2 000 ₽. Если логотипа нет — можем разработать с нуля. Также полезны фото фасада для визуализации.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Что входит в фирменный стиль?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Фирменный стиль включает: логотип, цветовую палитру, фирменные шрифты, фирменный блок (контакты), правила использования логотипа, примеры применения на разных носителях. Оформляем в удобный брендбук (PDF). Можно передать дизайнерам и типографиям.
+                  </div>
+                </details>
+              </div>
+            </div>
+
             <ServiceCards excludeService="design" />
             
             <div className="mt-8">

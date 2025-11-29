@@ -298,6 +298,62 @@ const Banners = () => {
               </Button>
             </div>
 
+            <div className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Частые вопросы</h2>
+              
+              <div className="space-y-4">
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Сколько стоит баннер?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Цена зависит от размера и материала. Стандартный баннер 510 г/м² — от 450 ₽/м². Сетчатый баннер — от 550 ₽/м². Roll-up стенд (80×200 см) — от 4 500 ₽. X-баннер (60×160 см) — от 2 800 ₽. В цену входит печать, проварка швов и установка люверсов.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Как быстро можно изготовить баннер?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Стандартный срок — 2–3 рабочих дня. Срочное изготовление — за 24 часа с доплатой 30%. Мобильные стенды (roll-up, X-баннер) — 1–2 дня. Для выставок и мероприятий можем сделать в суперсрочном режиме.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Можно ли использовать баннер повторно?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Да, баннеры можно использовать многократно. После мероприятия сворачивайте и храните в сухом месте. Рекомендуем хранить в трубе или чехле. Перед повторным использованием проверьте люверсы и состояние полотна. При бережном обращении баннер служит 2–3 года.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Чем отличаются roll-up и X-баннер?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Roll-up — более солидный и устойчивый, баннер скручивается в корпус. Подходит для презентаций и выставок. X-баннер (паук) — легче и дешевле, баннер натягивается на крестообразную рамку. Подходит для промо-акций и торговых точек. Оба варианта легко перевозить.
+                  </div>
+                </details>
+
+                <details className="bg-white rounded-lg shadow-md group">
+                  <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
+                    Как ухаживать за баннером?
+                    <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    Протирайте влажной тканью при загрязнении. Не используйте агрессивные химикаты. При хранении избегайте перегибов и заломов. Уличные баннеры можно мыть из шланга. Проверяйте люверсы перед каждым использованием — при необходимости можно заменить.
+                  </div>
+                </details>
+              </div>
+            </div>
+
             <ServiceCards excludeService="banners" />
             
             <div className="mt-8">
