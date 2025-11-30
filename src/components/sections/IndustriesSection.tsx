@@ -28,6 +28,11 @@ const industries = [
     description: "Вывески и навигация для СТО"
   },
   {
+    icon: "Car",
+    title: "Автобизнес",
+    description: "Вывески для автосалонов и дилерских центров"
+  },
+  {
     icon: "Building2",
     title: "Банки",
     description: "Представительские вывески и интерьерное оформление"
