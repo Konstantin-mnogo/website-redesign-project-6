@@ -121,7 +121,7 @@ const ContentSections = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши услуги</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Полный спектр рекламных услуг для вашего бизнеса
+              Широкий спектр рекламных услуг для вашего бизнеса
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
