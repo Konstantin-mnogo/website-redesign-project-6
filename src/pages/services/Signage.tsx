@@ -168,7 +168,7 @@ const Signage = () => {
                         <h3 className="text-xl font-bold">Объемные буквы с подсветкой контражур</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Свечение идёт из-за букв, создавая эффектный световой ореол на стене. Смотрится роскошно в темное время суток и привлекает максимум внимания. Топовое решение для ресторанов, отелей и премиум-брендов.
+                        Свечение идёт из-за букв, создавая эффектный световой ореол на стене. Смотрится роскошно в темное время суток и привлекает внимание. Топовое решение для ресторанов, отелей и премиум-брендов.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
@@ -177,7 +177,7 @@ const Signage = () => {
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Максимальная видимость ночью</span>
+                          <span>Прекрасная видимость ночью</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
