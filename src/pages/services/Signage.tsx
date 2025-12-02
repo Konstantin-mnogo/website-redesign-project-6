@@ -37,9 +37,14 @@ const Signage = () => {
                   <p className="text-gray-700 mb-3">
                     При заказе вывески с подсветкой — <span className="font-semibold text-primary">дизайн-проект и визуализация бесплатно</span>. Вы увидите, как будет выглядеть вывеска на вашем здании до начала производства.
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 mb-4">
                     Акция действует до конца месяца
                   </p>
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" asChild>
+                    <a href="#contact-form">
+                      Заказать световую вывеску
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -347,7 +352,7 @@ const Signage = () => {
 
             <ServiceCards excludeService="signage" />
             
-            <div className="mt-8">
+            <div className="mt-8" id="contact-form">
               <ServiceContactForm serviceName="Вывески и световые короба" />
             </div>
           </div>
