@@ -177,7 +177,7 @@ const Signage = () => {
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Прекрасная видимость ночью</span>
+                          <span>Оригинальный вид вывески</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
