@@ -8,9 +8,10 @@ import { useEffect } from "react";
 
 interface ServiceContactFormProps {
   serviceName: string;
+  onSuccess?: () => void;
 }
 
-const ServiceContactForm = ({ serviceName }: ServiceContactFormProps) => {
+const ServiceContactForm = ({ serviceName, onSuccess }: ServiceContactFormProps) => {
   const [formData, setFormData] = useState({ name: '', phone: '+7 ', message: '' });
   const [consent, setConsent] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,7 +47,14 @@ const ServiceContactForm = ({ serviceName }: ServiceContactFormProps) => {
         setSubmitStatus('success');
         setFormData({ name: '', phone: '+7 ', message: `Интересует услуга: ${serviceName}.\n\n` });
         setConsent(true);
-        setTimeout(() => setSubmitStatus('idle'), 5000);
+        if (onSuccess) {
+          setTimeout(() => {
+            setSubmitStatus('idle');
+            onSuccess();
+          }, 2000);
+        } else {
+          setTimeout(() => setSubmitStatus('idle'), 5000);
+        }
       } else {
         setSubmitStatus('error');
         setTimeout(() => setSubmitStatus('idle'), 3000);

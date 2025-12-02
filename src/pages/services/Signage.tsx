@@ -5,8 +5,16 @@ import Icon from "@/components/ui/icon";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ServiceCards from "@/components/services/ServiceCards";
 import ServiceContactForm from "@/components/services/ServiceContactForm";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const Signage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen">
       <Header />
@@ -37,13 +45,8 @@ const Signage = () => {
                   <p className="text-gray-700 mb-3">
                     При заказе вывески с подсветкой — <span className="font-semibold text-primary">дизайн-проект и визуализация бесплатно</span>. Вы увидите, как будет выглядеть вывеска на вашем здании до начала производства.
                   </p>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Акция действует до конца месяца
-                  </p>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" asChild>
-                    <a href="#contact-form">
-                      Заказать световую вывеску
-                    </a>
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" onClick={() => setIsModalOpen(true)}>
+                    Заказать световую вывеску
                   </Button>
                 </div>
               </div>
@@ -360,6 +363,22 @@ const Signage = () => {
       </main>
 
       <Footer />
+
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold">
+              Заказать световую вывеску
+            </DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            <ServiceContactForm 
+              serviceName="Вывески и световые короба" 
+              onSuccess={() => setIsModalOpen(false)}
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
