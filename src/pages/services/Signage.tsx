@@ -98,12 +98,12 @@ const Signage = () => {
                         <h3 className="text-xl font-bold">Объемные буквы на подложке</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Буквы монтируются на единую панель-подложку из композита или акрила. Смотрится современно и солидно, легко монтируется одним блоком. Популярный выбор для офисных центров и торговых площадей.
+                        Буквы монтируются на кассеты из композита. Смотрится современно и солидно, монтируется одним или несколькими блоками. Популярный выбор для офисных центров и торговых площадей.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Быстрый и простой монтаж</span>
+                          <span>Монтаж производится на фасад или металлокаркас</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
@@ -111,7 +111,7 @@ const Signage = () => {
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Подложка может быть любого цвета</span>
+                          <span>Подложка может быть в заводской краске или оклеен пленкой</span>
                         </li>
                       </ul>
                     </div>
