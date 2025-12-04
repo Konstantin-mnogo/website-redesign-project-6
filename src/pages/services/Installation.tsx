@@ -5,8 +5,11 @@ import Icon from "@/components/ui/icon";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ServiceCards from "@/components/services/ServiceCards";
 import ServiceContactForm from "@/components/services/ServiceContactForm";
+import { useState } from "react";
 
 const Installation = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -38,9 +41,12 @@ const Installation = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Специальное предложение</h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 mb-4">
                     При заказе полного цикла (производство + монтаж) — <span className="font-semibold text-primary">бесплатно установим фотореле "день/ночь"</span>. Установим качественно и безопасно.
                   </p>
+                  <Button size="lg" className="shadow-lg" onClick={() => setIsDialogOpen(true)}>
+                    Получить расчет
+                  </Button>
                 </div>
               </div>
             </div>
@@ -361,6 +367,11 @@ const Installation = () => {
       </main>
 
       <Footer />
+      
+      <ServiceContactForm 
+        isOpen={isDialogOpen} 
+        onClose={() => setIsDialogOpen(false)} 
+      />
     </div>
   );
 };
