@@ -111,7 +111,7 @@ const Installation = () => {
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Допуски к высотным работам</span>
+                          <span>Монтаж с вышек 15-50 м</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
