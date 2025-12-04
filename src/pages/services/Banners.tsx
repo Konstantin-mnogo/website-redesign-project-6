@@ -38,9 +38,17 @@ const Banners = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Специальное предложение</h3>
-                  <p className="text-gray-700 mb-3">
-                    При заказе баннера от 60 кв.м — <span className="font-semibold text-primary">скидка на печать баннера 10%</span>. При заказе мобильного стенда "паук" или "роллап" - каждый 10й стенд в подарок.
+                  <p className="text-gray-700 mb-4">
+                    При заказе баннера с монтажем от 60 кв.м — скидка на печать баннера 15%. При заказе мобильного стенда "паук" или "роллап" - каждый 10й стенд в подарок.
                   </p>
+                  <Button size="lg" className="shadow-lg" onClick={() => {
+                    const form = document.getElementById('contact-form');
+                    if (form) {
+                      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}>
+                    Заказать расчет
+                  </Button>
                 </div>
               </div>
             </div>
