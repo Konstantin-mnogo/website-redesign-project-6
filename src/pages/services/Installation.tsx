@@ -38,11 +38,8 @@ const Installation = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Специальное предложение</h3>
-                  <p className="text-gray-700 mb-3">
-                    При заказе полного цикла (производство + монтаж) — <span className="font-semibold text-primary">бесплатная проверка подсветки и гарантия 2 года</span>. Установим качественно и безопасно.
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Акция действует до конца месяца
+                  <p className="text-gray-700">
+                    При заказе полного цикла (производство + монтаж) — <span className="font-semibold text-primary">бесплатно установим фотореле "день/ночь"</span>. Установим качественно и безопасно.
                   </p>
                 </div>
               </div>
