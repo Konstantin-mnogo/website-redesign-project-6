@@ -60,31 +60,31 @@ const Banners = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/360e1741-fa70-4e57-83fa-eaf9a7691738.jpg" 
-                        alt="Фасадные баннеры"
+                        src="https://cdn.poehali.dev/files/d324e615-caf3-4d9c-8cc7-7c15953cd9ea.png" 
+                        alt="Сетчатые баннеры"
                         className="w-full h-64 md:h-full object-cover"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
-                        <Icon name="Building" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Фасадные баннеры</h3>
+                        <Icon name="Wind" size={24} className="text-primary" />
+                        <h3 className="text-xl font-bold">Сетчатые баннеры</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Большие рекламные баннеры для размещения на зданиях и заборах. Выдерживают сильный ветер, дождь и снег. Изготавливаются из прочного винила с усиленными краями и люверсами для крепления. Максимальная видимость рекламы.
+                        Баннеры с микроотверстиями, которые пропускают ветер. Устойчивы к сильным порывам ветра, не порвутся. Подходят для строительных лесов, заборов и высотных фасадов. Сохраняют яркость цветов 1,5-3 года.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Большая площадь покрытия</span>
+                          <span>Ветропроницаемость</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Устойчивость к погоде</span>
+                          <span>Высокая прочность</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Видно издалека</span>
+                          <span>Для строительных лесов</span>
                         </li>
                       </ul>
                     </div>
