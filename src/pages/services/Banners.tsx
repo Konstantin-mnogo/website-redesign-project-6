@@ -308,11 +308,11 @@ const Banners = () => {
               <div className="space-y-4">
                 <details className="bg-white rounded-lg shadow-md group">
                   <summary className="cursor-pointer p-6 font-semibold text-lg flex justify-between items-center">
-                    Сколько стоит баннер?
+                    Какой баннер можно сделать?
                     <Icon name="ChevronDown" size={20} className="transition-transform group-open:rotate-180" />
                   </summary>
                   <div className="px-6 pb-6 text-gray-700">
-                    Цена зависит от размера и материала. Стандартный баннер 510 г/м² — от 450 ₽/м². Сетчатый баннер — от 550 ₽/м². Roll-up стенд (80×200 см) — от 4 500 ₽. X-баннер (60×160 см) — от 2 800 ₽. В цену входит печать, проварка швов и установка люверсов.
+                    Печатать можно на практически любом виде баннера, от тонкого до толстого. Какой баннер выбрать вам, подскажет менеджер.
                   </div>
                 </details>
 
