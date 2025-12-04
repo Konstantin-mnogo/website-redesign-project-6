@@ -173,10 +173,10 @@ const Banners = () => {
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
                         <Icon name="Wind" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Сетчатые баннеры (Mesh)</h3>
+                        <h3 className="text-xl font-bold">Сетчатые баннеры</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Баннеры с микроотверстиями, которые пропускают ветер. Устойчивы к сильным порывам ветра, не порвутся. Идеальны для строительных лесов, заборов и высотных фасадов. Сохраняют яркость цветов даже при длительном использовании.
+                        Баннеры с микроотверстиями, которые пропускают ветер. Устойчивы к сильным порывам ветра, не порвутся. Подходят для строительных лесов, заборов и высотных фасадов. Сохраняют яркость цветов 1,5-3 года.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
