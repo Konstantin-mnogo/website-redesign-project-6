@@ -46,7 +46,7 @@ const Design = () => {
                     При заказе полного цикла (дизайн + производство + монтаж) — <span className="font-semibold text-red-600">согласование вывески в г. Благовещенск делаем в подарок.</span> Вы получите готовую вывеску со всеми разрешениями.
                   </p>
                   <Button size="lg" className="shadow-lg" onClick={() => setIsDialogOpen(true)}>
-                    Заказать дизайн и согласование
+                    Получить расчет
                   </Button>
                 </div>
               </div>
