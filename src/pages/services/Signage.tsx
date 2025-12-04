@@ -32,7 +32,7 @@ const Signage = () => {
             </h1>
             
             <p className="text-lg text-gray-700 mb-8">
-              Изготавливаем фасадные вывески, объемные буквы и световые короба любой сложности — от лаконичных до премиальных решений. Подбираем конструкцию под архитектуру фасада и требования законодательства, обеспечиваем равномерную подсветку и долговечность.
+              Изготавливаем фасадные вывески, объёмные буквы и световые короба любой сложности — от лаконичных до премиальных решений. Подбираем конструкцию под архитектуру фасада и требования законодательства, обеспечиваем равномерную подсветку и долговечность.
             </p>
 
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 mb-8 border-2 border-primary/20">
@@ -68,7 +68,7 @@ const Signage = () => {
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
                         <Icon name="Box" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Объемные буквы на металлокаркасе</h3>
+                        <h3 className="text-xl font-bold">Объёмные буквы на металлокаркасе</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
                         Классическое решение для фасадов. Буквы крепятся на металлическом каркасе, который может быть окрашен в нужный цвет. Хорошо подходят для практически любых надписей. Данный тип вывесок широко используется во всех регионах.
@@ -103,7 +103,7 @@ const Signage = () => {
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
                         <Icon name="Square" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Объемные буквы на подложке</h3>
+                        <h3 className="text-xl font-bold">Объёмные буквы на подложке</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
                         Буквы монтируются на кассеты из композита. Смотрится современно и солидно, монтируется одним или несколькими блоками. Популярный выбор для офисных центров и торговых площадей.
@@ -119,7 +119,7 @@ const Signage = () => {
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Подложка может быть в заводской краске или оклеен пленкой</span>
+                          <span>Подложка может быть в заводской краске или оклеена плёнкой</span>
                         </li>
                       </ul>
                     </div>
@@ -138,7 +138,7 @@ const Signage = () => {
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
                         <Icon name="Sparkles" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Объемные буквы на контурной подложке</h3>
+                        <h3 className="text-xl font-bold">Объёмные буквы на контурной подложке</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
                         Подложка вырезается по контуру надписи или логотипа. Создаёт эффект "парящих" букв с элегантным акцентом. Отличное решение для брендов, которым нельзя использовать подложку, а важно сохранить фирменный стиль.

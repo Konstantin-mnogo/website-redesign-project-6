@@ -43,7 +43,7 @@ const Banners = () => {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Специальное предложение</h3>
                   <p className="text-gray-700 mb-4">
-                    При заказе баннера с монтажем от 60 кв.м — <span className="font-semibold text-red-600">скидка на печать баннера 15%</span>. При заказе мобильного стенда "паук" или "роллап" - <span className="font-semibold text-red-600">каждый 10й стенд в подарок</span>.
+                    При заказе баннера с монтажем от 60 кв.м — <span className="font-semibold text-red-600">скидка на печать баннера 15%</span>. При заказе мобильного стенда "паук" или "роллап" - <span className="font-semibold text-red-600">каждый 10-й стенд в подарок</span>.
                   </p>
                   <Button size="lg" className="shadow-lg" onClick={() => setIsDialogOpen(true)}>
                     Заказать расчет
