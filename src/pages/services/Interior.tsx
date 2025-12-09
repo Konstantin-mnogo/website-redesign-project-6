@@ -57,7 +57,7 @@ const Interior = () => {
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Виды информационных стендов</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Виды интерьерной рекламы</h2>
               
               <div className="grid gap-8">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -71,24 +71,24 @@ const Interior = () => {
                     </div>
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
-                        <Icon name="Clipboard" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Напольные стенды с карманами</h3>
+                        <Icon name="PanelTop" size={24} className="text-primary" />
+                        <h3 className="text-xl font-bold">Интерьерные вывески</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Классические стойки для выставок, офисов и торговых залов. Оснащены карманами для листовок форматов А5, А4, А3 и А2. Устойчивые, мобильные, легко переставляются. Идеальны для зон ожидания, ресепшн и презентаций.
+                        Объёмные буквы и логотипы на стену для брендирования офиса, магазина или ресепшн. Изготавливаются из пластика, металла или дерева. Создают солидный имидж компании и помогают посетителям сразу понять, куда они попали. Крепятся на скрытый крепёж — выглядит аккуратно и стильно.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Несколько карманов для разных материалов</span>
+                          <span>Объёмный эффект усиливает восприятие</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Легко перемещать и переставлять</span>
+                          <span>Различные материалы под любой стиль</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Устойчивая конструкция</span>
+                          <span>Идеально для зоны ресепшн</span>
                         </li>
                       </ul>
                     </div>
@@ -106,24 +106,24 @@ const Interior = () => {
                     </div>
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
-                        <Icon name="Smartphone" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Настольные стенды</h3>
+                        <Icon name="SquareStack" size={24} className="text-primary" />
+                        <h3 className="text-xl font-bold">Настенные информационные стенды</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Компактные информационные держатели для визиток, прайс-листов и буклетов. Размещаются на стойках регистрации, столах менеджеров, кассах. Занимают минимум места, всегда на виду у клиента.
+                        Информационные доски и панели для размещения объявлений, расписаний, схем эвакуации и внутренних регламентов. Могут быть пробковыми, магнитными или со сменными карманами. Помогают организовать пространство и держать сотрудников в курсе важных новостей.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Компактный размер</span>
+                          <span>Удобная смена информации</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Идеально для прайсов и визиток</span>
+                          <span>Экономия пространства</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Удобно для зоны ресепшн</span>
+                          <span>Подходит для офисов и производств</span>
                         </li>
                       </ul>
                     </div>
@@ -141,24 +141,24 @@ const Interior = () => {
                     </div>
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
-                        <Icon name="SquareStack" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Настенные информационные панели (стенды)</h3>
+                        <Icon name="Lightbulb" size={24} className="text-primary" />
+                        <h3 className="text-xl font-bold">Световое торговое оборудование</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Крепятся на стену, экономят место. Отлично подходят для коридоров, холлов и переговорных. Могут быть с рамками для быстрой смены информации или с карманами для документов. Профессиональный вид для офисов.
+                        Подсвеченные витрины, лайтбоксы и LED-стеллажи для презентации товаров. Свет привлекает внимание и подчёркивает достоинства продукции. Используется в магазинах косметики, аптеках, ювелирных салонах. Работает от электросети, энергоэффективное LED-освещение.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Экономия пространства</span>
+                          <span>Привлекает внимание покупателей</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Быстрая замена информации</span>
+                          <span>Презентует товар выгодно</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Подходит для узких помещений</span>
+                          <span>Энергоэффективное LED</span>
                         </li>
                       </ul>
                     </div>
@@ -170,30 +170,30 @@ const Interior = () => {
                     <div className="md:w-2/5">
                       <img 
                         src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/8677186a-58e5-4417-949b-b88b7841a504.jpg" 
-                        alt="Уличные стенды"
+                        alt="Фотозоны"
                         className="w-full h-64 md:h-full object-cover"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
-                        <Icon name="CloudSun" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Уличные стенды</h3>
+                        <Icon name="Camera" size={24} className="text-primary" />
+                        <h3 className="text-xl font-bold">Фотозоны</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Защищённые от дождя, снега и ветра. Изготовлены из влагостойких материалов с UV-защитой от выгорания. Используются для рекламы, меню кафе, анонсов мероприятий. Могут иметь освещение для работы в тёмное время суток.
+                        Брендированные зоны для фото на мероприятиях, в магазинах и шоурумах. Баннеры с фирменным дизайном, объёмные логотипы, декоративные конструкции. Помогают посетителям делиться впечатлениями в соцсетях — бесплатная реклама вашего бренда. Устанавливаются быстро, подходят для событий и постоянного размещения.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Защита от влаги и УФ-лучей</span>
+                          <span>Вирусный эффект в соцсетях</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Возможна подсветка</span>
+                          <span>Брендирование по вашему дизайну</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Всепогодное использование</span>
+                          <span>Подходит для мероприятий и магазинов</span>
                         </li>
                       </ul>
                     </div>
