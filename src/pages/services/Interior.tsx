@@ -199,6 +199,41 @@ const Interior = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div className="md:flex">
+                    <div className="md:w-2/5">
+                      <img 
+                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/5c61fe0c-aecd-4a29-a55c-eb7e4a8a2a9e.jpg" 
+                        alt="Неоновые вывески"
+                        className="w-full h-64 md:h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-6 md:w-3/5">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Icon name="Sparkles" size={24} className="text-primary" />
+                        <h3 className="text-xl font-bold">Неоновые вывески</h3>
+                      </div>
+                      <p className="text-gray-700 mb-4">
+                        Яркие светящиеся надписи и логотипы для баров, кафе, салонов красоты и современных офисов. Создаются из гибких LED-неоновых трубок, которые безопаснее классического неона и потребляют меньше энергии. Излучают мягкое равномерное свечение, создают атмосферу и привлекают внимание. Можно изготовить любую форму, надпись или символ. Монтируются на стену или устанавливаются на подставку.
+                      </p>
+                      <ul className="space-y-2 text-gray-600">
+                        <li className="flex items-center gap-2">
+                          <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
+                          <span>Яркое равномерное свечение</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
+                          <span>Любые формы и цвета</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
+                          <span>Энергоэффективный LED-неон</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
