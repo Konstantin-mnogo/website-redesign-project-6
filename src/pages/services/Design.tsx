@@ -108,7 +108,7 @@ const Design = () => {
                   <div className="md:flex md:flex-row-reverse">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/files/vizualizacia.jpg" 
+                        src="https://cdn.poehali.dev/files/vizualizacia.jpg?v=2" 
                         alt="Пример 3D визуализации дизайна фасада и вывески магазина Дельта с зеленым брендингом, демонстрация концепции оформления фасада"
                         className="w-full h-64 md:h-full object-cover"
                         loading="lazy"
