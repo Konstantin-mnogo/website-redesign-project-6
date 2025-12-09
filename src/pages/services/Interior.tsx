@@ -107,23 +107,23 @@ const Interior = () => {
                     <div className="p-6 md:w-3/5">
                       <div className="flex items-center gap-2 mb-3">
                         <Icon name="SquareStack" size={24} className="text-primary" />
-                        <h3 className="text-xl font-bold">Настенные информационные стенды</h3>
+                        <h3 className="text-xl font-bold">Информационные стенды</h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Информационные доски и панели для размещения объявлений, расписаний, схем эвакуации и внутренних регламентов. Могут быть пробковыми, магнитными или со сменными карманами. Помогают организовать пространство и держать сотрудников в курсе важных новостей.
+                        Напольные и настенные конструкции для размещения информационных материалов в офисах, торговых центрах и на выставках. Оснащаются карманами для буклетов, прайс-листов и флаеров. Мобильные версии легко переставлять, настенные экономят место. Помогают посетителям быстро найти нужную информацию и создают профессиональный облик компании.
                       </p>
                       <ul className="space-y-2 text-gray-600">
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Удобная смена информации</span>
+                          <span>Напольные и настенные варианты</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Экономия пространства</span>
+                          <span>Карманы для разных форматов</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <Icon name="Check" size={18} className="text-green-600 flex-shrink-0" />
-                          <span>Подходит для офисов и производств</span>
+                          <span>Легко обновлять материалы</span>
                         </li>
                       </ul>
                     </div>
