@@ -60,9 +60,10 @@ const Installation = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/2ff6ffe1-a901-47bb-bb6f-f8a783def8a5.jpg" 
-                        alt="Фасадный монтаж"
+                        src="https://cdn.poehali.dev/files/montage.jpg" 
+                        alt="Фасадный монтаж световой вывески автомойки FoamTime на кирпичной стене"
                         className="w-full h-64 md:h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -95,9 +96,10 @@ const Installation = () => {
                   <div className="md:flex md:flex-row-reverse">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/db8114f6-e43f-421f-9f81-9f106195e8d6.jpg" 
-                        alt="Высотные работы"
+                        src="https://cdn.poehali.dev/files/visota.jpg" 
+                        alt="Высотные работы по монтажу вывески на многоэтажном здании"
                         className="w-full h-64 md:h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -130,9 +132,10 @@ const Installation = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/91260b43-3da7-4373-b990-6d631f4d2ec7.jpg" 
-                        alt="Электромонтаж"
+                        src="https://cdn.poehali.dev/files/electromontage.jpg" 
+                        alt="Электромонтаж и установка вывески у входа в здание"
                         className="w-full h-64 md:h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -165,9 +168,10 @@ const Installation = () => {
                   <div className="md:flex md:flex-row-reverse">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/9680de5e-d1c7-41a3-a128-3ff8e0457e43.jpg" 
-                        alt="Тестирование и сервис"
+                        src="https://cdn.poehali.dev/files/test-service.jpg" 
+                        alt="Техническое обслуживание и ремонт световых вывесок с автовышки"
                         className="w-full h-64 md:h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
