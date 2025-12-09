@@ -60,7 +60,7 @@ const Banners = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/360e1741-fa70-4e57-83fa-eaf9a7691738.jpg" 
+                        src="https://cdn.poehali.dev/files/banner-fasad.jpg" 
                         alt="Фасадные баннеры"
                         className="w-full h-64 md:h-full object-cover"
                       />
@@ -95,7 +95,7 @@ const Banners = () => {
                   <div className="md:flex md:flex-row-reverse">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/245166fc-24c2-4e2a-9e52-c332221e1190.jpg" 
+                        src="https://cdn.poehali.dev/files/rollup.jpg" 
                         alt="Roll-up стенды"
                         className="w-full h-64 md:h-full object-cover"
                       />
@@ -130,7 +130,7 @@ const Banners = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/7d993b20-7e69-4c6e-b6fb-40f9517a77f0.jpg" 
+                        src="https://cdn.poehali.dev/files/pauk.jpg" 
                         alt="X-баннеры"
                         className="w-full h-64 md:h-full object-cover"
                       />
