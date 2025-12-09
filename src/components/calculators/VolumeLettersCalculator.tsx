@@ -102,7 +102,7 @@ const VolumeLettersCalculator = ({
                       Требуется монтаж
                     </label>
                     <p className="text-xs text-muted-foreground">
-                      Профессиональная установка вывески на павильон НТО
+                      Профессиональная установка вывески на павильон
                     </p>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ const VolumeLettersCalculator = ({
             </div>
 
             <OrderDialog
-              calculatorType="Объёмные буквы для павильонов НТО"
+              calculatorType="Вывеска для павильона"
               price={calculatePrice()}
               details={{
                 "Текст": displayText,

@@ -191,7 +191,7 @@ const CalculatorSection = () => {
                   className="gap-2 w-full sm:w-auto text-sm"
                 >
                   <Icon name="Type" size={20} />
-                  Объёмные буквы для павильонов НТО
+                  Вывеска для павильона
                 </Button>
               </div>
             </div>
