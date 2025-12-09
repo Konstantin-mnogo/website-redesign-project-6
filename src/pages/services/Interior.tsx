@@ -64,8 +64,8 @@ const Interior = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/a3a803e5-66e7-46f8-b511-695b0518fa3c.jpg" 
-                        alt="Напольные стенды"
+                        src="https://cdn.poehali.dev/files/viveska-interer.jpg" 
+                        alt="Интерьерная вывеска"
                         className="w-full h-64 md:h-full object-cover"
                       />
                     </div>
@@ -99,8 +99,8 @@ const Interior = () => {
                   <div className="md:flex md:flex-row-reverse">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/f323dd20-cfd0-4147-8f48-582fee4a6e86.jpg" 
-                        alt="Настольные стенды"
+                        src="https://cdn.poehali.dev/files/stendi.jpg" 
+                        alt="Информационный стенд"
                         className="w-full h-64 md:h-full object-cover"
                       />
                     </div>
@@ -134,8 +134,8 @@ const Interior = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/7e735892-a1bf-463e-a75f-2ff14a320b4d.jpg" 
-                        alt="Настенные стенды"
+                        src="https://cdn.poehali.dev/files/svet-torg.jpg" 
+                        alt="Световое торговое оборудование"
                         className="w-full h-64 md:h-full object-cover"
                       />
                     </div>
@@ -169,7 +169,7 @@ const Interior = () => {
                   <div className="md:flex md:flex-row-reverse">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/8677186a-58e5-4417-949b-b88b7841a504.jpg" 
+                        src="https://cdn.poehali.dev/files/fotozona.jpg" 
                         alt="Фотозоны"
                         className="w-full h-64 md:h-full object-cover"
                       />
@@ -204,7 +204,7 @@ const Interior = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/5c61fe0c-aecd-4a29-a55c-eb7e4a8a2a9e.jpg" 
+                        src="https://cdn.poehali.dev/files/neon.jpg" 
                         alt="Неоновые вывески"
                         className="w-full h-64 md:h-full object-cover"
                       />
