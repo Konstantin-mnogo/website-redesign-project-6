@@ -7,12 +7,22 @@ import ServiceCards from "@/components/services/ServiceCards";
 import ServiceContactForm from "@/components/services/ServiceContactForm";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Design = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Разработка дизайна и согласование вывесок в Благовещенске | Рекламное агентство Лихач</title>
+        <meta name="description" content="Профессиональная разработка дизайна вывесок, создание макетов и согласование в администрации. Полный цикл: от концепции до разрешительных документов. Согласование в подарок при комплексном заказе." />
+        <meta name="keywords" content="разработка дизайна вывесок, согласование вывесок Благовещенск, макеты вывесок, фирменный стиль, 3D визуализация вывески, согласование рекламы" />
+        <meta property="og:title" content="Разработка дизайна и согласование вывесок | Рекламное агентство Лихач" />
+        <meta property="og:description" content="Создаём концепции, визуализации и согласовываем вывески в Благовещенске. Полный цикл от идеи до документов." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://lihach-adv.ru/design" />
+      </Helmet>
       <Header />
       
       <main className="pt-24 pb-16">
