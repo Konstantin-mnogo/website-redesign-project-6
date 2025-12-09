@@ -202,6 +202,114 @@ const Installation = () => {
               </div>
             </div>
 
+            <div className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Этапы монтажных работ</h2>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-primary">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 rounded-full p-3 flex-shrink-0">
+                      <Icon name="ClipboardCheck" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-primary text-white text-sm font-bold px-2 py-1 rounded">Этап 1</span>
+                        <h3 className="font-bold text-lg">Выезд и осмотр</h3>
+                      </div>
+                      <p className="text-gray-700">
+                        Выезжаем на объект, оцениваем тип фасада, измеряем место установки. Определяем точки крепления и подбираем необходимый крепёж.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-primary">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 rounded-full p-3 flex-shrink-0">
+                      <Icon name="FileText" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-primary text-white text-sm font-bold px-2 py-1 rounded">Этап 2</span>
+                        <h3 className="font-bold text-lg">Подготовка документов</h3>
+                      </div>
+                      <p className="text-gray-700">
+                        Согласовываем план монтажа с вами. При необходимости готовим документы для высотных работ и допуски.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-primary">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 rounded-full p-3 flex-shrink-0">
+                      <Icon name="Wrench" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-primary text-white text-sm font-bold px-2 py-1 rounded">Этап 3</span>
+                        <h3 className="font-bold text-lg">Установка креплений</h3>
+                      </div>
+                      <p className="text-gray-700">
+                        Бурим отверстия, устанавливаем прочные анкеры и кронштейны. Проверяем надёжность каждого крепления перед установкой вывески.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-primary">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 rounded-full p-3 flex-shrink-0">
+                      <Icon name="Package" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-primary text-white text-sm font-bold px-2 py-1 rounded">Этап 4</span>
+                        <h3 className="font-bold text-lg">Монтаж вывески</h3>
+                      </div>
+                      <p className="text-gray-700">
+                        Аккуратно поднимаем вывеску на высоту и закрепляем на кронштейнах. Выравниваем по уровню и окончательно фиксируем.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-primary">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 rounded-full p-3 flex-shrink-0">
+                      <Icon name="Zap" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-primary text-white text-sm font-bold px-2 py-1 rounded">Этап 5</span>
+                        <h3 className="font-bold text-lg">Подключение электрики</h3>
+                      </div>
+                      <p className="text-gray-700">
+                        Прокладываем кабель скрытно, устанавливаем защиту от влаги. Подключаем блок питания и фотореле для автоматического включения.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-primary">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 rounded-full p-3 flex-shrink-0">
+                      <Icon name="CheckCircle" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-primary text-white text-sm font-bold px-2 py-1 rounded">Этап 6</span>
+                        <h3 className="font-bold text-lg">Проверка и сдача</h3>
+                      </div>
+                      <p className="text-gray-700">
+                        Тестируем подсветку, проверяем надёжность креплений. Делаем фотоотчёт и передаём гарантийные документы.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="bg-gray-50 rounded-xl p-6 md:p-8 mb-8">
               <h2 className="text-2xl font-semibold mb-6">Технологии и особенности</h2>
               
