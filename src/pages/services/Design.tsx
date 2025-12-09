@@ -147,13 +147,13 @@ const Design = () => {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80" 
-                        alt="Техническая документация для согласования вывески, чертежи и планы фасада здания"
+                        src="https://cdn.poehali.dev/files/soglasovanie.png" 
+                        alt="Пример согласования дизайна вывески центра бытовых услуг Каролина: 3D визуализация фасада, технические чертежи и макеты для администрации"
                         className="w-full h-64 md:h-full object-cover"
                         loading="lazy"
-                        width="800"
-                        height="600"
-                        title="Подготовка документов для согласования вывески"
+                        width="1080"
+                        height="1080"
+                        title="Согласование дизайна вывески с визуализацией и чертежами"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
