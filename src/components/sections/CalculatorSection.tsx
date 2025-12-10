@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import StandCalculator from "@/components/calculators/StandCalculator";
-import SignageCalculator from "@/components/calculators/SignageCalculator";
 import StandPreview from "@/components/calculators/StandPreview";
 import VolumeLettersCalculator from "@/components/calculators/VolumeLettersCalculator";
 import Icon from "@/components/ui/icon";
@@ -11,7 +10,7 @@ const CalculatorSection = () => {
     const hash = window.location.hash.replace('#', '');
     if (hash === 'stand') return 'stand';
     if (hash === 'volume') return 'volume-letters';
-    return 'signage';
+    return 'stand';
   };
 
   const [selectedCalculator, setSelectedCalculator] = useState<string>(getInitialCalculator());
@@ -49,12 +48,7 @@ const CalculatorSection = () => {
   const [standImage, setStandImage] = useState<string>("");
   const [imagePosition, setImagePosition] = useState<string>("fill");
 
-  const [signageWidth, setSignageWidth] = useState<string>("");
-  const [signageHeight, setSignageHeight] = useState<string>("");
-  const [signageType, setSignageType] = useState<string>("световой-короб");
-  const [signageMaterial, setSignageMaterial] = useState<string>("акрил");
-  const [signageLighting, setSignageLighting] = useState<boolean>(true);
-  const [signageInstallation, setSignageInstallation] = useState<boolean>(true);
+
 
   const [volumeSignText, setVolumeSignText] = useState<string>("");
   const [volumeNeedsBracket, setVolumeNeedsBracket] = useState<boolean>(false);
@@ -102,39 +96,7 @@ const CalculatorSection = () => {
     return Math.max(1500, Math.round(price));
   };
 
-  const calculateSignagePrice = () => {
-    const width = parseFloat(signageWidth);
-    const height = parseFloat(signageHeight);
-    
-    if (!width || !height || width <= 0 || height <= 0) return 0;
-    
-    const area = width * height;
-    const pricePerSqm = 15000;
-    
-    const materialCoefficients: Record<string, number> = {
-      "акрил": 1.0,
-      "композит": 1.2,
-      "пвх": 0.8,
-      "металл": 1.5
-    };
-    
-    const typeCoefficients: Record<string, number> = {
-      "световой-короб": 1.0,
-      "объемные-буквы": 1.3,
-      "плоская-вывеска": 0.7,
-      "неоновая": 1.8
-    };
-    
-    let price = area * pricePerSqm;
-    
-    price *= materialCoefficients[signageMaterial] || 1.0;
-    price *= typeCoefficients[signageType] || 1.0;
-    
-    if (signageLighting) price += area * 2000;
-    if (signageInstallation) price += area * 1500;
-    
-    return Math.round(price);
-  };
+
 
   const calculateVolumeLettersPrice = () => {
     if (!volumeSignText.trim()) return 0;
@@ -166,15 +128,6 @@ const CalculatorSection = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4 mb-6 md:mb-8">
-                <Button 
-                  size="lg"
-                  variant={selectedCalculator === "signage" ? "default" : "outline"}
-                  onClick={() => setSelectedCalculator("signage")}
-                  className="gap-2 w-full sm:w-auto"
-                >
-                  <Icon name="Store" size={20} />
-                  Вывески
-                </Button>
                 <Button 
                   size="lg"
                   variant={selectedCalculator === "stand" ? "default" : "outline"}
@@ -225,24 +178,6 @@ const CalculatorSection = () => {
                 imagePosition={imagePosition}
                 setImagePosition={setImagePosition}
                 calculateStandPrice={calculateStandPrice}
-              />
-            )}
-            
-            {selectedCalculator === "signage" && (
-              <SignageCalculator
-                signageWidth={signageWidth}
-                setSignageWidth={setSignageWidth}
-                signageHeight={signageHeight}
-                setSignageHeight={setSignageHeight}
-                signageType={signageType}
-                setSignageType={setSignageType}
-                signageMaterial={signageMaterial}
-                setSignageMaterial={setSignageMaterial}
-                signageLighting={signageLighting}
-                setSignageLighting={setSignageLighting}
-                signageInstallation={signageInstallation}
-                setSignageInstallation={setSignageInstallation}
-                calculateSignagePrice={calculateSignagePrice}
               />
             )}
             
