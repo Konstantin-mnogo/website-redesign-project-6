@@ -26,6 +26,34 @@ const Signage = () => {
         <meta property="og:title" content="Заказать вывеску в Благовещенске | Объемные буквы и световые короба" />
         <meta property="og:description" content="Изготовление световых вывесок в Благовещенске. Бесплатный дизайн-проект. Гарантия 3 года." />
         <meta property="og:url" content="https://ragrafika.ru/signage" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Изготовление вывесок и световых коробов",
+            "serviceType": "Вывески и световая реклама",
+            "provider": {
+              "@type": "Organization",
+              "name": "Графика",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Благовещенск",
+                "addressRegion": "Амурская область",
+                "addressCountry": "RU"
+              },
+              "areaServed": {
+                "@type": "State",
+                "name": "Амурская область"
+              }
+            },
+            "description": "Изготовление и установка вывесок в Благовещенске. Объемные буквы, световые короба, световая реклама.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       

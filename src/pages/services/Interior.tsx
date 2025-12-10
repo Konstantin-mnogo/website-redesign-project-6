@@ -26,6 +26,34 @@ const Interior = () => {
         <meta property="og:title" content="Интерьерная реклама в Благовещенске | Стенды и навигация" />
         <meta property="og:description" content="Оформление офисов, информационные стенды, навигация. Полный цикл от дизайна до монтажа." />
         <meta property="og:url" content="https://ragrafika.ru/interior" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Интерьерная реклама и оформление офисов",
+            "serviceType": "Информационные стенды и навигация",
+            "provider": {
+              "@type": "Organization",
+              "name": "Графика",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Благовещенск",
+                "addressRegion": "Амурская область",
+                "addressCountry": "RU"
+              },
+              "areaServed": {
+                "@type": "State",
+                "name": "Амурская область"
+              }
+            },
+            "description": "Оформление офисов и торговых пространств в Благовещенске. Информационные стенды, навигация, интерьерная реклама.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       

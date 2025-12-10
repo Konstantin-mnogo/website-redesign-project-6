@@ -27,6 +27,34 @@ const Transport = () => {
         <meta property="og:title" content="Брендирование транспорта в Благовещенске | Оклейка авто" />
         <meta property="og:description" content="Частичная оклейка коммерческих авто виниловой пленкой. Профессиональный монтаж." />
         <meta property="og:url" content="https://ragrafika.ru/transport" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Брендирование транспорта",
+            "serviceType": "Оклейка коммерческих авто виниловой пленкой",
+            "provider": {
+              "@type": "Organization",
+              "name": "Графика",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Благовещенск",
+                "addressRegion": "Амурская область",
+                "addressCountry": "RU"
+              },
+              "areaServed": {
+                "@type": "State",
+                "name": "Амурская область"
+              }
+            },
+            "description": "Брендирование коммерческого транспорта в Благовещенске. Оклейка авто виниловой пленкой, реклама на транспорте.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       

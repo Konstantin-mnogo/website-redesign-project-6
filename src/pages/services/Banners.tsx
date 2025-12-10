@@ -22,6 +22,34 @@ const Banners = () => {
         <meta property="og:title" content="Баннеры и штендеры в Благовещенске" />
         <meta property="og:description" content="Широкоформатная печать, Roll-up стенды, мобильные рекламные конструкции." />
         <meta property="og:url" content="https://ragrafika.ru/banners" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Баннеры и штендеры",
+            "serviceType": "Широкоформатная печать и мобильные конструкции",
+            "provider": {
+              "@type": "Organization",
+              "name": "Графика",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Благовещенск",
+                "addressRegion": "Амурская область",
+                "addressCountry": "RU"
+              },
+              "areaServed": {
+                "@type": "State",
+                "name": "Амурская область"
+              }
+            },
+            "description": "Изготовление баннеров и штендеров в Благовещенске. Широкоформатная печать, Roll-up стенды, X-баннеры.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       

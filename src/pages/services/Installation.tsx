@@ -23,6 +23,34 @@ const Installation = () => {
         <meta property="og:title" content="Монтаж вывесок в Благовещенске" />
         <meta property="og:description" content="Профессиональный монтаж рекламных конструкций. Фасадные и высотные работы." />
         <meta property="og:url" content="https://ragrafika.ru/installation" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Монтаж и установка вывесок",
+            "serviceType": "Фасадные и высотные работы",
+            "provider": {
+              "@type": "Organization",
+              "name": "Графика",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Благовещенск",
+                "addressRegion": "Амурская область",
+                "addressCountry": "RU"
+              },
+              "areaServed": {
+                "@type": "State",
+                "name": "Амурская область"
+              }
+            },
+            "description": "Профессиональный монтаж и установка вывесок в Благовещенске. Фасадные работы, высотный монтаж.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       
