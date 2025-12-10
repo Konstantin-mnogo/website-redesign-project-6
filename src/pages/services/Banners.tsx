@@ -35,17 +35,17 @@ const Banners = () => {
               Изготавливаем баннеры для фасадов, интерьеров и мероприятий, а также мобильные конструкции для быстрой смены рекламных сообщений.
             </p>
 
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 mb-8 border-2 border-primary/20">
-              <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground rounded-full p-3 flex-shrink-0">
-                  <Icon name="Gift" size={24} />
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-4 sm:p-6 md:p-8 mb-8 border-2 border-primary/20">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="bg-primary text-primary-foreground rounded-full p-2 sm:p-3 flex-shrink-0">
+                  <Icon name="Gift" size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Специальное предложение</h3>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">Специальное предложение</h3>
                   <p className="text-gray-700 mb-4">
                     При заказе баннера с монтажем от 60 кв.м — <span className="font-semibold text-red-600">скидка на печать баннера 15%</span>. При заказе мобильного стенда "паук" или "роллап" - <span className="font-semibold text-red-600">каждый 10-й стенд в подарок</span>.
                   </p>
-                  <Button size="lg" className="shadow-lg" onClick={() => setIsDialogOpen(true)}>
+                  <Button size="default" className="shadow-lg w-full sm:w-auto" onClick={() => setIsDialogOpen(true)}>
                     Заказать расчет
                   </Button>
                 </div>

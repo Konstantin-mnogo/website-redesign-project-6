@@ -35,17 +35,17 @@ const Signage = () => {
               Изготавливаем фасадные вывески, объёмные буквы и световые короба любой сложности — от лаконичных до премиальных решений. Подбираем конструкцию под архитектуру фасада и требования законодательства, обеспечиваем равномерную подсветку и долговечность.
             </p>
 
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 mb-8 border-2 border-primary/20">
-              <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground rounded-full p-3 flex-shrink-0">
-                  <Icon name="Gift" size={24} />
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-4 sm:p-6 md:p-8 mb-8 border-2 border-primary/20">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="bg-primary text-primary-foreground rounded-full p-2 sm:p-3 flex-shrink-0">
+                  <Icon name="Gift" size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Специальное предложение</h3>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">Специальное предложение</h3>
                   <p className="text-gray-700 mb-3">
                     При заказе вывески с подсветкой — <span className="font-semibold text-primary">дизайн-проект и визуализация бесплатно</span>. Вы увидите, как будет выглядеть вывеска на вашем здании до начала производства.
                   </p>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" onClick={() => setIsModalOpen(true)}>
+                  <Button size="default" className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto" onClick={() => setIsModalOpen(true)}>
                     Заказать световую вывеску
                   </Button>
                 </div>

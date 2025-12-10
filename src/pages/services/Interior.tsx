@@ -39,17 +39,17 @@ const Interior = () => {
               Оформляем офисные и торговые пространства: бренд-зоны, ресепшн, переговорные, навигацию. Делаем решение «под ключ» — от замера и дизайна до аккуратного монтажа без остановки работы офиса.
             </p>
 
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 mb-8 border-2 border-primary/20">
-              <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground rounded-full p-3 flex-shrink-0">
-                  <Icon name="Gift" size={24} />
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-4 sm:p-6 md:p-8 mb-8 border-2 border-primary/20">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="bg-primary text-primary-foreground rounded-full p-2 sm:p-3 flex-shrink-0">
+                  <Icon name="Gift" size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Специальное предложение</h3>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">Специальное предложение</h3>
                   <p className="text-gray-700 mb-4">
                     При заказе комплексного оформления — <span className="font-semibold text-primary">скидка 10-15%</span>. Работаем без остановки бизнес-процессов, устанавливаем в согласованные сроки.
                   </p>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" onClick={() => setIsModalOpen(true)}>
+                  <Button size="default" className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto" onClick={() => setIsModalOpen(true)}>
                     Заказать расчет оформления
                   </Button>
                 </div>

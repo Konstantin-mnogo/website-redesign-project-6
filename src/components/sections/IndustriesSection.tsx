@@ -158,7 +158,7 @@ const IndustriesSection = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {industries.map((industry, index) => (
               <Card 
                 key={index}
@@ -169,12 +169,12 @@ const IndustriesSection = () => {
                   setIsDialogOpen(true);
                 }}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Icon name={industry.icon} size={28} className="text-primary" />
+                <CardContent className="p-3 sm:p-4 md:p-6 text-center">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-primary/10 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
+                    <Icon name={industry.icon} size={20} className="text-primary sm:w-6 sm:h-6 md:w-7 md:h-7" />
                   </div>
-                  <h3 className="font-bold mb-2 text-sm">{industry.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-tight">{industry.description}</p>
+                  <h3 className="font-bold mb-1 md:mb-2 text-xs sm:text-sm leading-tight">{industry.title}</h3>
+                  <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight hidden sm:block">{industry.description}</p>
                 </CardContent>
               </Card>
             ))}
