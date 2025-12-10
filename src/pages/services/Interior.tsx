@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,15 @@ const Interior = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Интерьерная реклама в Благовещенске | Стенды, навигация, оформление офисов | Графика</title>
+        <meta name="description" content="Изготовление интерьерной рекламы в Благовещенске и Свободном: информационные стенды, объемные буквы для офиса, навигация, световое оборудование. Под ключ от дизайна до монтажа." />
+        <meta name="keywords" content="стенды Благовещенск, информационные стенды, интерьерная реклама, оформление офиса Благовещенск, навигация, стенды Свободный" />
+        <link rel="canonical" href="https://ragrafika.ru/interior" />
+        <meta property="og:title" content="Интерьерная реклама в Благовещенске | Стенды и навигация" />
+        <meta property="og:description" content="Оформление офисов, информационные стенды, навигация. Полный цикл от дизайна до монтажа." />
+        <meta property="og:url" content="https://ragrafika.ru/interior" />
+      </Helmet>
       <Header />
       
       <main className="pt-24 pb-16">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,15 @@ const Banners = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Баннеры и штендеры в Благовещенске | Широкоформатная печать | Графика</title>
+        <meta name="description" content="Изготовление баннеров и штендеров в Благовещенске и Свободном. Широкоформатная печать, Roll-up стенды, X-баннеры, мобильные рекламные конструкции. Быстрое изготовление." />
+        <meta name="keywords" content="баннеры Благовещенск, штендеры, roll up стенды, широкоформатная печать Благовещенск, X-баннеры" />
+        <link rel="canonical" href="https://ragrafika.ru/banners" />
+        <meta property="og:title" content="Баннеры и штендеры в Благовещенске" />
+        <meta property="og:description" content="Широкоформатная печать, Roll-up стенды, мобильные рекламные конструкции." />
+        <meta property="og:url" content="https://ragrafika.ru/banners" />
+      </Helmet>
       <Header />
       
       <main className="pt-24 pb-16">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,15 @@ const Transport = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Брендирование транспорта в Благовещенске | Оклейка авто пленкой | Графика</title>
+        <meta name="description" content="Брендирование транспорта в Благовещенске и Свободном. Частичная оклейка коммерческих авто виниловой пленкой. Профессиональный монтаж. Долговечные материалы." />
+        <meta name="keywords" content="брендирование транспорта Благовещенск, оклейка авто пленкой, реклама на транспорте, оклейка машин Благовещенск" />
+        <link rel="canonical" href="https://ragrafika.ru/transport" />
+        <meta property="og:title" content="Брендирование транспорта в Благовещенске | Оклейка авто" />
+        <meta property="og:description" content="Частичная оклейка коммерческих авто виниловой пленкой. Профессиональный монтаж." />
+        <meta property="og:url" content="https://ragrafika.ru/transport" />
+      </Helmet>
       <Header />
       
       <main className="pt-24 pb-16">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,15 @@ const Installation = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Монтаж и установка вывесок в Благовещенске | Профессиональный монтаж | Графика</title>
+        <meta name="description" content="Профессиональный монтаж и установка вывесок в Благовещенске и Свободном. Фасадные работы, высотный монтаж, подключение подсветки. Безопасно и качественно." />
+        <meta name="keywords" content="монтаж вывесок Благовещенск, установка вывесок, высотные работы, фасадный монтаж Благовещенск" />
+        <link rel="canonical" href="https://ragrafika.ru/installation" />
+        <meta property="og:title" content="Монтаж вывесок в Благовещенске" />
+        <meta property="og:description" content="Профессиональный монтаж рекламных конструкций. Фасадные и высотные работы." />
+        <meta property="og:url" content="https://ragrafika.ru/installation" />
+      </Helmet>
       <Header />
       
       <main className="pt-24 pb-16">

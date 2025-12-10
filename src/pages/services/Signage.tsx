@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,15 @@ const Signage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Заказать вывеску в Благовещенске и Свободном | Объемные буквы, световые короба | Графика</title>
+        <meta name="description" content="Изготовление и установка вывесок в Благовещенске и Свободном. Объемные буквы с подсветкой, световые короба любой сложности. Бесплатный дизайн-проект при заказе световой вывески. Гарантия 3 года." />
+        <meta name="keywords" content="заказать вывеску Благовещенск, вывеска Свободный, объемные буквы Благовещенск, световая вывеска, световые буквы, световая реклама, изготовление вывесок, вывеска в магазин" />
+        <link rel="canonical" href="https://ragrafika.ru/signage" />
+        <meta property="og:title" content="Заказать вывеску в Благовещенске | Объемные буквы и световые короба" />
+        <meta property="og:description" content="Изготовление вывесок любой сложности. Бесплатный дизайн-проект. Гарантия 3 года." />
+        <meta property="og:url" content="https://ragrafika.ru/signage" />
+      </Helmet>
       <Header />
       
       <main className="pt-24 pb-16">
