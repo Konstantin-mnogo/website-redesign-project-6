@@ -35,6 +35,38 @@ const VolumeLettersCalculator = ({
 
   return (
     <div className="max-w-7xl mx-auto">
+      <div className="mb-8 md:mb-12">
+        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">Примеры наших работ</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+            <img 
+              src="https://cdn.poehali.dev/files/pavilon-nto.jpg" 
+              alt="Вывеска для павильона ПРОДУКТЫ днем - объемные буквы в Благовещенске"
+              className="w-full h-[300px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+              <div className="text-white">
+                <p className="text-lg font-bold mb-1">Павильон "ПРОДУКТЫ"</p>
+                <p className="text-sm opacity-90">Вывеска с объёмными буквами, дневной вид</p>
+              </div>
+            </div>
+          </div>
+          <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+            <img 
+              src="https://cdn.poehali.dev/files/pavilon-nto-noch.jpg" 
+              alt="Световая вывеска для павильона ПРОДУКТЫ ночью - LED подсветка в Благовещенске"
+              className="w-full h-[300px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+              <div className="text-white">
+                <p className="text-lg font-bold mb-1">Павильон "ПРОДУКТЫ"</p>
+                <p className="text-sm opacity-90">Световая вывеска с LED-подсветкой, ночной вид</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
         <Card className="shadow-xl">
           <CardContent className="p-6 md:p-8">
