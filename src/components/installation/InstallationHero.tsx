@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 const InstallationHero = () => {
   return (
-    <div className="max-w-4xl mx-auto">
+    <>
       <Breadcrumbs items={[
         { label: "Главная", path: "/" },
         { label: "Монтаж и установка" }
@@ -19,7 +19,7 @@ const InstallationHero = () => {
       <p className="text-lg text-gray-700 mb-8">
         Обеспечиваем безопасный и аккуратный монтаж на фасадах и внутри помещений, подключение электричества и последующее обслуживание.
       </p>
-    </div>
+    </>
   );
 };
 
