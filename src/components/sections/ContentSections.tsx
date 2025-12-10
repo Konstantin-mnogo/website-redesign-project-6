@@ -97,7 +97,7 @@ const portfolio = [
     image: "https://cdn.poehali.dev/files/allauto.jpg",
     title: "All auto",
     description: "Брендирование офиса заказа авто",
-    category: "Интерьерная реклама"
+    category: "Наружная вывеска"
   },
   {
     image: "https://cdn.poehali.dev/files/domkulturi.jpg",
