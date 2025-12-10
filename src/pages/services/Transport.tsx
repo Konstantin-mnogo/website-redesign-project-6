@@ -354,7 +354,7 @@ const Transport = () => {
           <DialogHeader>
             <DialogTitle>Заказать оклейку автомобиля</DialogTitle>
           </DialogHeader>
-          <ServiceContactForm serviceName="Брендирование транспорта" />
+          <ServiceContactForm serviceName="Брендирование транспорта" compact />
         </DialogContent>
       </Dialog>
     </div>

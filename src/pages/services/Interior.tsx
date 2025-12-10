@@ -423,6 +423,7 @@ const Interior = () => {
           <div className="mt-4">
             <ServiceContactForm 
               serviceName="Интерьерная реклама" 
+              compact
               onSuccess={() => setIsModalOpen(false)}
             />
           </div>

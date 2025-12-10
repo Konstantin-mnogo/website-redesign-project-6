@@ -51,7 +51,7 @@ const Installation = () => {
             <p className="text-gray-600 mb-6">
               Заполните форму, и наш специалист рассчитает стоимость монтажа для вашего объекта
             </p>
-            <ServiceContactForm compact />
+            <ServiceContactForm serviceName="Монтаж и установка" compact />
           </div>
         </DialogContent>
       </Dialog>

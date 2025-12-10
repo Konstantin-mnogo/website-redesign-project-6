@@ -386,6 +386,7 @@ const Banners = () => {
           </DialogHeader>
           <ServiceContactForm 
             serviceName="Баннеры и штендеры" 
+            compact
             onSuccess={() => setIsDialogOpen(false)}
           />
         </DialogContent>

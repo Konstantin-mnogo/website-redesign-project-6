@@ -384,6 +384,7 @@ const Signage = () => {
           <div className="mt-4">
             <ServiceContactForm 
               serviceName="Вывески и световые короба" 
+              compact
               onSuccess={() => setIsModalOpen(false)}
             />
           </div>
