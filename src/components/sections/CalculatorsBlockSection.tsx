@@ -4,12 +4,6 @@ import Icon from "@/components/ui/icon";
 
 const calculators = [
   {
-    icon: "Store",
-    title: "Калькулятор вывесок",
-    description: "Рассчитайте стоимость световых коробов и объёмных букв",
-    link: "/calculator#signage"
-  },
-  {
     icon: "Clipboard",
     title: "Калькулятор информационных стендов",
     description: "Узнайте цену на инфостенды с карманами для буклетов",
@@ -33,7 +27,7 @@ const CalculatorsBlockSection = () => {
             Рассчитайте стоимость рекламной продукции прямо сейчас
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {calculators.map((calculator, index) => (
             <Card 
               key={index} 
