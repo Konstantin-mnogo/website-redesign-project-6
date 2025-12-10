@@ -52,28 +52,70 @@ const advantages = [
 
 const portfolio = [
   {
-    image: "http://www.ragrafika.ru/wp-content/uploads/2018/12/1.jpg",
-    title: "Вывески и световые короба"
+    image: "https://cdn.poehali.dev/files/produkti.jpg",
+    title: "Павильон ПРОДУКТЫ",
+    description: "Световая вывеска для павильона с LED-подсветкой",
+    category: "Наружная реклама"
   },
   {
-    image: "http://www.ragrafika.ru/wp-content/uploads/2018/12/IMG_8845.jpg",
-    title: "Наружная реклама"
+    image: "https://cdn.poehali.dev/files/nto-len60.jpg",
+    title: "НТО Ленина 60",
+    description: "Фасадные вывески для торгового комплекса",
+    category: "Вывески и световые короба"
   },
   {
-    image: "http://www.ragrafika.ru/wp-content/uploads/2018/12/P1080261.jpg",
-    title: "Брендирование транспорта"
+    image: "https://cdn.poehali.dev/files/alesha.jpg",
+    title: "Магазин мебели Алёша",
+    description: "Оформление фасада с объёмными буквами",
+    category: "Наружная реклама"
   },
   {
-    image: "http://www.ragrafika.ru/wp-content/uploads/2018/12/P1080291.jpg",
-    title: "Объёмные буквы"
+    image: "https://cdn.poehali.dev/files/eapteka.jpg",
+    title: "СберЕаптека",
+    description: "Световой короб с подсветкой для аптеки",
+    category: "Вывески и световые короба"
   },
   {
-    image: "http://www.ragrafika.ru/wp-content/uploads/2018/12/DSC_0017.jpg",
-    title: "Интерьерная реклама"
+    image: "https://cdn.poehali.dev/files/dns-elegant.jpg",
+    title: "DNS и Элегант",
+    description: "Комплексное оформление торгового центра",
+    category: "Наружная реклама"
   },
   {
-    image: "http://www.ragrafika.ru/wp-content/uploads/2018/12/IMG_9049.jpg",
-    title: "Баннеры и вывески"
+    image: "https://cdn.poehali.dev/files/koffeina.jpg",
+    title: "Кофейня Кофеина",
+    description: "Объёмные металлические буквы",
+    category: "Вывески и световые короба"
+  },
+  {
+    image: "https://cdn.poehali.dev/files/baby.jpg",
+    title: "Баби Смайл",
+    description: "Световая вывеска для детской стоматологии",
+    category: "Вывески и световые короба"
+  },
+  {
+    image: "https://cdn.poehali.dev/files/allauto.jpg",
+    title: "All auto",
+    description: "Брендирование магазина автозапчастей",
+    category: "Интерьерная реклама"
+  },
+  {
+    image: "https://cdn.poehali.dev/files/domkulturi.jpg",
+    title: "Дом культуры",
+    description: "Фасадная вывеска с LED-подсветкой",
+    category: "Наружная реклама"
+  },
+  {
+    image: "https://cdn.poehali.dev/files/mvideo.jpg",
+    title: "М.Видео",
+    description: "Интерьерная навигация для торгового центра",
+    category: "Интерьерная реклама"
+  },
+  {
+    image: "https://cdn.poehali.dev/files/zeya.jpg",
+    title: "Зея кондитерская",
+    description: "Фасадная вывеска для кондитерской фабрики",
+    category: "Наружная реклама"
   }
 ];
 
@@ -156,23 +198,32 @@ const ContentSections = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Портфолио</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Примеры наших работ
+              Наши работы по изготовлению рекламы в Благовещенске
             </p>
           </div>
-          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolio.map((item, index) => (
               <div 
                 key={index} 
-                className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500"
               >
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-white text-xl font-bold">{item.title}</h3>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={`${item.title} - ${item.description} | Рекламное агентство Графика Благовещенск`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="mb-2">
+                      <span className="inline-block px-3 py-1 bg-primary/80 text-white text-xs font-semibold rounded-full">
+                        {item.category}
+                      </span>
+                    </div>
+                    <h3 className="text-white text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-white/90 text-sm">{item.description}</p>
                   </div>
                 </div>
               </div>
