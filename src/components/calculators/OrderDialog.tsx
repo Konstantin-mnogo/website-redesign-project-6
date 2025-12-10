@@ -32,6 +32,25 @@ const OrderDialog = ({ calculatorType, price, details, children, imageData, onIm
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const { toast } = useToast();
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+    if (isLeftSwipe || isRightSwipe) {
+      setOpen(false);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -87,7 +106,12 @@ const OrderDialog = ({ calculatorType, price, details, children, imageData, onIm
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto">
+      <DialogContent 
+        className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <DialogHeader>
           <DialogTitle className="text-lg sm:text-xl">Заказать расчёт</DialogTitle>
           <DialogDescription className="text-sm">
