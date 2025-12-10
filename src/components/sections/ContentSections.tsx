@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useCountUp } from "@/hooks/useCountUp";
 import CalculatorsBlockSection from "./CalculatorsBlockSection";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -155,6 +155,59 @@ const AdvantageCounter = ({ number, suffix, text }: { number: number; suffix: st
 
 const ContentSections = () => {
   const [expandedTestimonial, setExpandedTestimonial] = useState<number | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % portfolio.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + portfolio.length) % portfolio.length);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+    if (isLeftSwipe) nextImage();
+    if (isRightSwipe) prevImage();
+  };
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (!lightboxOpen) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown as any);
+    return () => window.removeEventListener('keydown', handleKeyDown as any);
+  }, [lightboxOpen]);
 
   return (
     <>
@@ -205,7 +258,8 @@ const ContentSections = () => {
             {portfolio.map((item, index) => (
               <div 
                 key={index} 
-                className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500"
+                className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                onClick={() => openLightbox(index)}
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
@@ -225,12 +279,73 @@ const ContentSections = () => {
                     <h3 className="text-white text-xl font-bold mb-2">{item.title}</h3>
                     <p className="text-white/90 text-sm">{item.description}</p>
                   </div>
+                  <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <Icon name="ZoomIn" size={20} className="text-white" />
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {lightboxOpen && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          onClick={closeLightbox}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
+          >
+            <Icon name="X" size={24} className="text-white" />
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); prevImage(); }}
+            className="absolute left-4 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
+          >
+            <Icon name="ChevronLeft" size={28} className="text-white" />
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); nextImage(); }}
+            className="absolute right-4 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
+          >
+            <Icon name="ChevronRight" size={28} className="text-white" />
+          </button>
+
+          <div 
+            className="max-w-7xl max-h-[90vh] mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={portfolio[currentImageIndex].image}
+              alt={portfolio[currentImageIndex].title}
+              className="max-w-full max-h-[80vh] object-contain rounded-lg"
+            />
+            <div className="mt-4 text-center">
+              <div className="mb-2">
+                <span className="inline-block px-3 py-1 bg-primary text-white text-xs font-semibold rounded-full">
+                  {portfolio[currentImageIndex].category}
+                </span>
+              </div>
+              <h3 className="text-white text-xl md:text-2xl font-bold mb-2">
+                {portfolio[currentImageIndex].title}
+              </h3>
+              <p className="text-white/80 text-sm md:text-base">
+                {portfolio[currentImageIndex].description}
+              </p>
+              <p className="text-white/60 text-sm mt-2">
+                {currentImageIndex + 1} / {portfolio.length}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <section id="advantages" className="py-20 bg-secondary text-white scroll-mt-24">
         <div className="container mx-auto px-4">
