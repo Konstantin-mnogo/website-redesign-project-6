@@ -165,7 +165,7 @@ const Signage = () => {
                   <div className="md:flex md:flex-row-reverse">
                     <div className="md:w-2/5">
                       <img 
-                        src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/166cbb72-8897-4196-b59a-d81935575765.jpg" 
+                        src="https://cdn.poehali.dev/files/domino-kontragur.jpg" 
                         alt="Объемные буквы с подсветкой контражур"
                         className="w-full h-64 md:h-full object-cover"
                       />
