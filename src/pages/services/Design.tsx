@@ -72,7 +72,7 @@ const Design = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/concept.jpg" 
                         alt="Концепция и эскизы дизайна вывески"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                         loading="lazy"
                         width="400"
                         height="300"
@@ -110,7 +110,7 @@ const Design = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/vizualizacia-2.jpg" 
                         alt="Пример 3D визуализации дизайна фасада и вывески магазина Дельта с зеленым брендингом днем и ночью, демонстрация концепции оформления фасада"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                         loading="lazy"
                         width="1080"
                         height="1080"
@@ -149,7 +149,7 @@ const Design = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/soglasovanie.jpg?v=3" 
                         alt="Пример согласования дизайна вывески центра бытовых услуг Каролина: 3D визуализация фасада, технические чертежи и макеты для администрации"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                         loading="lazy"
                         width="1080"
                         height="1080"

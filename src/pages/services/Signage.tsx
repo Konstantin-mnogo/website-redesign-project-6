@@ -121,7 +121,7 @@ const Signage = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/zeya-bukvi-na-karkase.jpg" 
                         alt="Объемные буквы на металлокаркасе"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -156,7 +156,7 @@ const Signage = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/eapteka-bukvi-napodlogke.jpg" 
                         alt="Объемные буквы на подложке"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -191,7 +191,7 @@ const Signage = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/maxim-bukvi-na-konturnoi-podlogke.jpg" 
                         alt="Объемные буквы на контурной подложке"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -226,7 +226,7 @@ const Signage = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/domino-kontragur.jpg" 
                         alt="Объемные буквы с подсветкой контражур"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">

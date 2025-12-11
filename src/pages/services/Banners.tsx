@@ -121,7 +121,7 @@ const Banners = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/banner-fasad.jpg" 
                         alt="Фасадные баннеры"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -156,7 +156,7 @@ const Banners = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/rollup.jpg" 
                         alt="Roll-up стенды"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -191,7 +191,7 @@ const Banners = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/pauk.jpg" 
                         alt="X-баннеры"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -226,7 +226,7 @@ const Banners = () => {
                       <img 
                         src="https://cdn.poehali.dev/projects/820f24d3-2a0c-446f-996e-d0f46f8895f8/files/aff6b420-2090-4f9b-a9e7-456653590886.jpg" 
                         alt="Сетчатые баннеры"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">

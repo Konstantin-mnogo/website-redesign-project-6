@@ -126,7 +126,7 @@ const Transport = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/okleika.jpg" 
                         alt="Частичная оклейка"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -161,7 +161,7 @@ const Transport = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/gruzovoi.jpg" 
                         alt="Оклейка грузовых авто"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -196,7 +196,7 @@ const Transport = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/perf-plenka.jpg" 
                         alt="Перфорированная плёнка на стёкла"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">

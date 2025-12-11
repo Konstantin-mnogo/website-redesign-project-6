@@ -125,7 +125,7 @@ const Interior = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/viveska-interer.jpg" 
                         alt="Интерьерная вывеска"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -160,7 +160,7 @@ const Interior = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/stendi.jpg" 
                         alt="Информационный стенд"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -195,7 +195,7 @@ const Interior = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/svet-torg.jpg" 
                         alt="Световое торговое оборудование"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -230,7 +230,7 @@ const Interior = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/fotozona.jpg" 
                         alt="Фотозоны"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
@@ -265,7 +265,7 @@ const Interior = () => {
                       <img 
                         src="https://cdn.poehali.dev/files/neon.jpg" 
                         alt="Неоновые вывески"
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-contain bg-gray-100"
                       />
                     </div>
                     <div className="p-6 md:w-3/5">
