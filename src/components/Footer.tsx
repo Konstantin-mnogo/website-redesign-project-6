@@ -23,17 +23,21 @@ const Footer = () => {
             <nav className="space-y-2">
               <Link to="/" className="block text-gray-600 hover:text-primary transition-colors text-sm">Главная</Link>
               <Link to="/#services" className="block text-gray-600 hover:text-primary transition-colors text-sm">Услуги</Link>
+              <Link to="/calculator" className="block text-gray-600 hover:text-primary transition-colors text-sm">Калькуляторы</Link>
               <Link to="/#portfolio" className="block text-gray-600 hover:text-primary transition-colors text-sm">Портфолио</Link>
               <Link to="/#testimonials" className="block text-gray-600 hover:text-primary transition-colors text-sm">Отзывы</Link>
               <Link to="/#contact" className="block text-gray-600 hover:text-primary transition-colors text-sm">Контакты</Link>
             </nav>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Калькуляторы</h4>
+            <h4 className="font-bold mb-4">Услуги</h4>
             <nav className="space-y-2">
-              <Link to="/calculator" className="block text-gray-600 hover:text-primary transition-colors text-sm">Все калькуляторы</Link>
-              <Link to="/calculator#stand" className="block text-gray-600 hover:text-primary transition-colors text-sm">Информационные стенды</Link>
-              <Link to="/calculator#volume" className="block text-gray-600 hover:text-primary transition-colors text-sm">Объёмные буквы</Link>
+              <Link to="/signage" className="block text-gray-600 hover:text-primary transition-colors text-sm">Вывески и световые короба</Link>
+              <Link to="/interior" className="block text-gray-600 hover:text-primary transition-colors text-sm">Интерьерная реклама</Link>
+              <Link to="/transport" className="block text-gray-600 hover:text-primary transition-colors text-sm">Брендирование транспорта</Link>
+              <Link to="/banners" className="block text-gray-600 hover:text-primary transition-colors text-sm">Баннеры и штендеры</Link>
+              <Link to="/design" className="block text-gray-600 hover:text-primary transition-colors text-sm">Разработка дизайна</Link>
+              <Link to="/installation" className="block text-gray-600 hover:text-primary transition-colors text-sm">Монтаж и установка</Link>
             </nav>
           </div>
           <div>
