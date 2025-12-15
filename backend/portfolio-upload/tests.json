@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "name": "Get all portfolio photos - empty array",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Get photos by category - empty array",
+      "method": "GET",
+      "path": "/?category=web-design",
+      "expectedStatus": 200
+    }
+  ]
+}

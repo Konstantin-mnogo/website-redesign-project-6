@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useCountUp } from "@/hooks/useCountUp";
 import CalculatorsBlockSection from "./CalculatorsBlockSection";
+import { PortfolioGallery } from "@/components/PortfolioGallery";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -254,7 +255,10 @@ const ContentSections = () => {
               Наши работы по изготовлению рекламы в Благовещенске
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <PortfolioGallery columns={3} showTitle={true} />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {portfolio.map((item, index) => (
               <div 
                 key={index} 
