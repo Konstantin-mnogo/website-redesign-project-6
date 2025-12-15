@@ -4,12 +4,13 @@ import base64
 import uuid
 import boto3
 import psycopg2
+import requests
+import time
 from typing import Dict, Any, Optional
-import replicate
 
 def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     '''
-    Загрузка и стилизация фото портфолио через Replicate AI
+    Загрузка и стилизация фото портфолио через Kandinsky (Яндекс)
     Принимает base64 изображение, категорию, применяет ИИ-фильтр
     Сохраняет оригинал и стилизованное фото в S3, метаданные в БД
     '''
@@ -119,40 +120,92 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         photo_id = cur.fetchone()[0]
         conn.commit()
         
-        # Стилизация через Replicate AI
+        # Стилизация через Kandinsky (Яндекс)
         try:
-            output = replicate.run(
-                "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b",
-                input={
-                    "image": original_url,
-                    "prompt": style_prompt,
-                    "strength": 0.3,
-                    "guidance_scale": 7.5
-                }
+            api_key = os.environ.get('YANDEX_API_KEY')
+            folder_id = os.environ.get('YANDEX_FOLDER_ID')
+            
+            if not api_key or not folder_id:
+                raise Exception('YANDEX_API_KEY or YANDEX_FOLDER_ID not configured')
+            
+            # Генерация через Kandinsky
+            headers = {
+                'Authorization': f'Api-Key {api_key}',
+                'Content-Type': 'application/json'
+            }
+            
+            # Запрос на генерацию (img2img)
+            generation_data = {
+                'modelUri': f'art://{folder_id}/yandex-art/latest',
+                'generationOptions': {
+                    'seed': str(uuid.uuid4().int)[:10],
+                    'aspectRatio': {
+                        'widthRatio': '16',
+                        'heightRatio': '9'
+                    }
+                },
+                'messages': [
+                    {
+                        'weight': '1',
+                        'text': style_prompt or 'professional portfolio style, clean, modern aesthetic, consistent lighting'
+                    }
+                ]
+            }
+            
+            # Если есть исходное изображение - используем его
+            generation_data['messages'].append({
+                'weight': '0.7',
+                'text': original_url
+            })
+            
+            gen_response = requests.post(
+                'https://llm.api.cloud.yandex.net/foundationModels/v1/imageGenerationAsync',
+                headers=headers,
+                json=generation_data,
+                timeout=30
             )
             
-            styled_image_url = output[0] if isinstance(output, list) else output
+            if gen_response.status_code != 200:
+                raise Exception(f'Kandinsky API error: {gen_response.text}')
             
-            # Скачать стилизованное и загрузить в S3
-            import requests
-            styled_data = requests.get(styled_image_url).content
-            styled_key = f'portfolio/styled/{category}/{file_id}.jpg'
+            operation_id = gen_response.json().get('id')
             
-            s3.put_object(
-                Bucket='files',
-                Key=styled_key,
-                Body=styled_data,
-                ContentType='image/jpeg'
-            )
-            
-            styled_url = f"https://cdn.poehali.dev/projects/{os.environ['AWS_ACCESS_KEY_ID']}/bucket/{styled_key}"
-            
-            # Обновить БД
-            cur.execute(
-                "UPDATE portfolio_photos SET styled_url = %s, is_processed = %s WHERE id = %s",
-                (styled_url, True, photo_id)
-            )
-            conn.commit()
+            # Ожидание результата (макс 60 сек)
+            for _ in range(30):
+                time.sleep(2)
+                check_response = requests.get(
+                    f'https://llm.api.cloud.yandex.net/operations/{operation_id}',
+                    headers=headers,
+                    timeout=10
+                )
+                
+                result = check_response.json()
+                if result.get('done'):
+                    image_base64_result = result.get('response', {}).get('image')
+                    if image_base64_result:
+                        # Декодировать и сохранить
+                        styled_data = base64.b64decode(image_base64_result)
+                        styled_key = f'portfolio/styled/{category}/{file_id}.jpg'
+                        
+                        s3.put_object(
+                            Bucket='files',
+                            Key=styled_key,
+                            Body=styled_data,
+                            ContentType='image/jpeg'
+                        )
+                        
+                        styled_url = f"https://cdn.poehali.dev/projects/{os.environ['AWS_ACCESS_KEY_ID']}/bucket/{styled_key}"
+                        
+                        # Обновить БД
+                        cur.execute(
+                            "UPDATE portfolio_photos SET styled_url = %s, is_processed = %s WHERE id = %s",
+                            (styled_url, True, photo_id)
+                        )
+                        conn.commit()
+                        break
+            else:
+                styled_url = None
+                print('Kandinsky timeout: generation took too long')
             
         except Exception as e:
             styled_url = None
